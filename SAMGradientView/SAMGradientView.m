@@ -14,15 +14,15 @@
 
 #pragma mark - Accessors
 
-- (void)setColors:(NSArray *)colors {
-	_colors = colors;
-	[self _refreshGradient];
+- (void)setGradientColors:(NSArray *)colors {
+	_gradientColors = colors;
+	[self refreshGradient];
 }
 
 
-- (void)setLocations:(NSArray *)locations {
-	_locations = locations;
-	[self _refreshGradient];
+- (void)setGradientLocations:(NSArray *)locations {
+	_gradientLocations = locations;
+	[self refreshGradient];
 }
 
 
@@ -108,9 +108,17 @@
 
 - (void)drawRect:(CGRect)rect {
 	CGContextRef context = UIGraphicsGetCurrentContext();
-
+	
 	CGSize size = self.bounds.size;
 	CGFloat const borderWidth = 1.0f;
+
+	// Gradient
+	if (_gradient) {
+		CGPoint start = CGPointMake(0.0f, 0.0f);
+		CGPoint end = (_direction == SAMGradientViewDirectionVertical ? CGPointMake(0.0f, size.height) :
+					   CGPointMake(size.width, 0.0f));
+		CGContextDrawLinearGradient(context, _gradient, start, end, kNilOptions);
+	}
 	
 	// Top
 	if (_topBorderColor) {
@@ -173,19 +181,6 @@
 		CGContextSetFillColorWithColor(context, _leftBorderColor.CGColor);
 		CGContextFillRect(context, CGRectMake(0.0f, sideY, borderWidth, sideHeight));
 	}
-	
-//	CGContextRef context = UIGraphicsGetCurrentContext();
-//	CGContextClipToRect(context, rect);
-//	
-//	// Gradient
-//	if (_gradient) {
-//		CGPoint start = CGPointMake(0.0f, 0.0f);
-//		CGPoint end = (_direction == SAMGradientViewDirectionVertical ? CGPointMake(0.0f, rect.size.height) :
-//					   CGPointMake(rect.size.width, 0.0f));
-//		CGContextDrawLinearGradient(context, _gradient, start, end, 0);
-//	}
-//	
-//	[super drawRect:rect];
 }
 
 
@@ -196,12 +191,61 @@
 }
 
 
-- (void)_refreshGradient {
+- (void)refreshGradient {
 	CGGradientRelease(_gradient);
-//	_gradient = SSCreateGradientWithColorsAndLocations(_colors, _locations);
+	_gradient = SAMGradientCreateWithColorsAndLocations(_gradientColors, _gradientLocations);
 	
 	// Redraw
 	[self setNeedsDisplay];
 }
 
 @end
+
+
+#pragma mark - Drawing Functions
+
+CGGradientRef SAMGradientCreateWithColors(NSArray *colors) {
+	return SAMGradientCreateWithColorsAndLocations(colors, nil);
+}
+
+
+CGGradientRef SAMGradientCreateWithColorsAndLocations(NSArray *colors, NSArray *locations) {
+	NSUInteger colorsCount = [colors count];
+	if (colorsCount < 2) {
+		return nil;
+	}
+	
+	CGColorSpaceRef colorSpace = CGColorGetColorSpace([[colors objectAtIndex:0] CGColor]);
+	
+	NSMutableArray *gradientColors = [[NSMutableArray alloc] initWithCapacity:colorsCount];
+	[colors enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
+		[gradientColors addObject:(id)[(UIColor *)object CGColor]];
+	}];
+	
+	CGFloat *gradientLocations = NULL;
+	NSUInteger locationsCount = [locations count];
+	if (locationsCount == colorsCount) {
+		gradientLocations = (CGFloat *)malloc(sizeof(CGFloat) * locationsCount);
+		[locations enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
+			gradientLocations[index] = [object floatValue];
+		}];
+	}
+	
+	CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)gradientColors, gradientLocations);
+	
+	if (gradientLocations) {
+		free(gradientLocations);
+	}
+	
+	return gradient;
+}
+
+
+void SAMDrawGradientInRect(CGContextRef context, CGGradientRef gradient, CGRect rect) {
+	CGContextSaveGState(context);
+	CGContextClipToRect(context, rect);
+	CGPoint start = CGPointMake(rect.origin.x, rect.origin.y);
+	CGPoint end = CGPointMake(rect.origin.x, rect.origin.y + rect.size.height);
+	CGContextDrawLinearGradient(context, gradient, start, end, 0);
+	CGContextRestoreGState(context);
+}

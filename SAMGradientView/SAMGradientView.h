@@ -20,6 +20,7 @@ typedef NS_ENUM(NSUInteger, SAMGradientViewDirection) {
 	SAMGradientViewDirectionHorizontal
 };
 
+
 /**
  Simple `UIView` wrapper for `CGGradient`.
  */
@@ -35,7 +36,7 @@ typedef NS_ENUM(NSUInteger, SAMGradientViewDirection) {
  
  The default is `nil`.
  */
-@property (nonatomic, copy) NSArray *colors;
+@property (nonatomic, copy) NSArray *gradientColors;
 
 /**
  An optional array of `NSNumber` objects defining the location of each gradient stop.
@@ -43,7 +44,7 @@ typedef NS_ENUM(NSUInteger, SAMGradientViewDirection) {
  The gradient stops are specified as values between `0` and `1`. The values must be monotonically
  increasing. If `nil`, the stops are spread uniformly across the range. Defaults to `nil`.
  */
-@property (nonatomic, copy) NSArray *locations;
+@property (nonatomic, copy) NSArray *gradientLocations;
 
 /**
  The direction of the gradient.
@@ -114,3 +115,18 @@ typedef NS_ENUM(NSUInteger, SAMGradientViewDirection) {
 @property (nonatomic, strong) UIColor *leftInsetColor;
 
 @end
+
+
+///-------------------------
+/// @name Creating Gradients
+///-------------------------
+
+extern CGGradientRef SAMGradientCreateWithColors(NSArray *colors) CF_RETURNS_RETAINED;
+extern CGGradientRef SAMGradientCreateWithColorsAndLocations(NSArray *colors, NSArray *locations) CF_RETURNS_RETAINED;
+
+
+///------------------------
+/// @name Drawing Gradients
+///------------------------
+
+extern void SAMDrawGradientInRect(CGContextRef context, CGGradientRef gradient, CGRect rect);

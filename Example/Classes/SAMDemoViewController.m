@@ -20,6 +20,8 @@
 	gradientView.backgroundColor = [UIColor lightGrayColor];
 	gradientView.topBorderColor = [UIColor redColor];
 	gradientView.bottomBorderColor = [UIColor blueColor];
+	gradientView.gradientColors = @[[UIColor greenColor], [UIColor yellowColor]];
+	gradientView.gradientLocations = @[@0.8, @1.0];
 	[self.view addSubview:gradientView];
 }
 
