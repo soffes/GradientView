@@ -18,10 +18,9 @@
 		21845E6C177E6EEC0002AA46 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21845E66177E6EEC0002AA46 /* Default-568h@2x.png */; };
 		21845E6D177E6EEC0002AA46 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 21845E67177E6EEC0002AA46 /* Default.png */; };
 		21845E6E177E6EEC0002AA46 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21845E68177E6EEC0002AA46 /* Default@2x.png */; };
-		21845E6F177E6EEC0002AA46 /* SAMGradientView-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21845E69177E6EEC0002AA46 /* SAMGradientView-Info.plist */; };
 		21845E79177E6F0B0002AA46 /* SAMGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21845E78177E6F0B0002AA46 /* SAMGradientView.m */; };
-		21845E7A177E6F630002AA46 /* SAMGradientViewTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21845E71177E6EF50002AA46 /* SAMGradientViewTests-Info.plist */; };
 		21845E7B177E6F630002AA46 /* SAMGradientViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21845E73177E6EF50002AA46 /* SAMGradientViewTests.m */; };
+		21845E7E177E722D0002AA46 /* SAMDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21845E7D177E722D0002AA46 /* SAMDemoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +53,8 @@
 		21845E73177E6EF50002AA46 /* SAMGradientViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMGradientViewTests.m; sourceTree = "<group>"; };
 		21845E77177E6F0B0002AA46 /* SAMGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMGradientView.h; sourceTree = "<group>"; };
 		21845E78177E6F0B0002AA46 /* SAMGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMGradientView.m; sourceTree = "<group>"; };
+		21845E7C177E722D0002AA46 /* SAMDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMDemoViewController.h; sourceTree = "<group>"; };
+		21845E7D177E722D0002AA46 /* SAMDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMDemoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +119,8 @@
 			children = (
 				21845E60177E6EEC0002AA46 /* SAMAppDelegate.h */,
 				21845E61177E6EEC0002AA46 /* SAMAppDelegate.m */,
+				21845E7C177E722D0002AA46 /* SAMDemoViewController.h */,
+				21845E7D177E722D0002AA46 /* SAMDemoViewController.m */,
 			);
 			name = Classes;
 			path = Example/Classes;
@@ -239,7 +242,6 @@
 				21845E6C177E6EEC0002AA46 /* Default-568h@2x.png in Resources */,
 				21845E6D177E6EEC0002AA46 /* Default.png in Resources */,
 				21845E6E177E6EEC0002AA46 /* Default@2x.png in Resources */,
-				21845E6F177E6EEC0002AA46 /* SAMGradientView-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +249,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21845E7A177E6F630002AA46 /* SAMGradientViewTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +278,7 @@
 				21845E6A177E6EEC0002AA46 /* SAMAppDelegate.m in Sources */,
 				21845E6B177E6EEC0002AA46 /* main.m in Sources */,
 				21845E79177E6F0B0002AA46 /* SAMGradientView.m in Sources */,
+				21845E7E177E722D0002AA46 /* SAMDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
