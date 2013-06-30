@@ -7,7 +7,12 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import <UIKit/UIKit.h>
+#import <CoreGraphics/CoreGraphics.h>
+#import "SAMGradientView.h"
 
 @interface SAMGradientViewTests : SenTestCase
+
+@property (nonatomic, strong) SAMGradientView *gradientView;
 
 @end

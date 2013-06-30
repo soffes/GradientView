@@ -8,11 +8,23 @@
 
 #import "SAMGradientView.h"
 
-@implementation SAMGradientView {
-	CGGradientRef _gradient;
-}
+@interface SAMGradientView ()
+@property (nonatomic, assign) CGGradientRef gradient;
+@end
+
+@implementation SAMGradientView
 
 #pragma mark - Accessors
+
+- (void)setGradient:(CGGradientRef)gradient {
+	if (_gradient) {
+		CGGradientRelease(_gradient);
+	}
+	
+	_gradient = gradient;
+	[self setNeedsDisplay];
+}
+
 
 - (void)setGradientColors:(NSArray *)colors {
 	_gradientColors = colors;
@@ -26,8 +38,8 @@
 }
 
 
-- (void)setDirection:(SAMGradientViewDirection)direction {
-	_direction = direction;
+- (void)setGradientDirection:(SAMGradientViewDirection)direction {
+	_gradientDirection = direction;
 	[self setNeedsDisplay];
 }
 
@@ -113,72 +125,72 @@
 	CGFloat const borderWidth = 1.0f;
 
 	// Gradient
-	if (_gradient) {
+	if (self.gradient) {
 		CGPoint start = CGPointMake(0.0f, 0.0f);
-		CGPoint end = (_direction == SAMGradientViewDirectionVertical ? CGPointMake(0.0f, size.height) :
+		CGPoint end = (self.gradientDirection == SAMGradientViewDirectionVertical ? CGPointMake(0.0f, size.height) :
 					   CGPointMake(size.width, 0.0f));
-		CGContextDrawLinearGradient(context, _gradient, start, end, kNilOptions);
+		CGContextDrawLinearGradient(context, self.gradient, start, end, kNilOptions);
 	}
 	
 	// Top
-	if (_topBorderColor) {
+	if (self.topBorderColor) {
 		// Top border
-		CGContextSetFillColorWithColor(context, _topBorderColor.CGColor);
+		CGContextSetFillColorWithColor(context, self.topBorderColor.CGColor);
 		CGContextFillRect(context, CGRectMake(0.0f, 0.0f, size.width, borderWidth));
 		
 		// Top inset
-		if (_topInsetColor) {
-			CGContextSetFillColorWithColor(context, _topInsetColor.CGColor);
+		if (self.topInsetColor) {
+			CGContextSetFillColorWithColor(context, self.topInsetColor.CGColor);
 			CGContextFillRect(context, CGRectMake(0.0f, borderWidth, size.width, borderWidth));
 		}
 	}
 	
-	CGFloat sideY = _topBorderColor ? 1.0f : 0.0f;
+	CGFloat sideY = self.topBorderColor ? 1.0f : 0.0f;
 	CGFloat sideHeight = size.height;
-	if (_topBorderColor) {
+	if (self.topBorderColor) {
 		sideHeight -= 1.0f;
 	}
 	
-	if (_bottomBorderColor) {
+	if (self.bottomBorderColor) {
 		sideHeight -= 1.0f;
 	}
 	
 	// Right
-	if (_rightBorderColor) {
+	if (self.rightBorderColor) {
 		// Right inset
-		if (_rightInsetColor) {
-			CGContextSetFillColorWithColor(context, _rightInsetColor.CGColor);
+		if (self.rightInsetColor) {
+			CGContextSetFillColorWithColor(context, self.rightInsetColor.CGColor);
 			CGContextFillRect(context, CGRectMake(size.width - borderWidth - borderWidth, sideY, borderWidth, sideHeight));
 		}
 		
 		// Right border
-		CGContextSetFillColorWithColor(context, _rightBorderColor.CGColor);
+		CGContextSetFillColorWithColor(context, self.rightBorderColor.CGColor);
 		CGContextFillRect(context, CGRectMake(size.width - borderWidth, sideY, borderWidth, sideHeight));
 	}
 	
 	// Bottom
-	if (_bottomBorderColor) {
+	if (self.bottomBorderColor) {
 		// Bottom inset
-		if (_bottomInsetColor) {
-			CGContextSetFillColorWithColor(context, _bottomInsetColor.CGColor);
+		if (self.bottomInsetColor) {
+			CGContextSetFillColorWithColor(context, self.bottomInsetColor.CGColor);
 			CGContextFillRect(context, CGRectMake(0.0f, rect.size.height - borderWidth - borderWidth, size.width, borderWidth));
 		}
 		
 		// Bottom border
-		CGContextSetFillColorWithColor(context, _bottomBorderColor.CGColor);
+		CGContextSetFillColorWithColor(context, self.bottomBorderColor.CGColor);
 		CGContextFillRect(context, CGRectMake(0.0f, rect.size.height - borderWidth, size.width, borderWidth));
 	}
 	
 	// Left
-	if (_leftBorderColor) {
+	if (self.leftBorderColor) {
 		// Left inset
-		if (_leftInsetColor) {
-			CGContextSetFillColorWithColor(context, _leftInsetColor.CGColor);
+		if (self.leftInsetColor) {
+			CGContextSetFillColorWithColor(context, self.leftInsetColor.CGColor);
 			CGContextFillRect(context, CGRectMake(borderWidth, sideY, borderWidth, sideHeight));
 		}
 		
 		// Left border
-		CGContextSetFillColorWithColor(context, _leftBorderColor.CGColor);
+		CGContextSetFillColorWithColor(context, self.leftBorderColor.CGColor);
 		CGContextFillRect(context, CGRectMake(0.0f, sideY, borderWidth, sideHeight));
 	}
 }
@@ -192,11 +204,7 @@
 
 
 - (void)refreshGradient {
-	CGGradientRelease(_gradient);
-	_gradient = SAMGradientCreateWithColorsAndLocations(_gradientColors, _gradientLocations);
-	
-	// Redraw
-	[self setNeedsDisplay];
+	self.gradient = SAMGradientCreateWithColorsAndLocations(self.gradientColors, self.gradientLocations);
 }
 
 @end

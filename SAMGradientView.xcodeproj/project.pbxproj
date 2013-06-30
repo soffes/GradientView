@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2149F1B81780C7E20083349D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2149F1B71780C7E20083349D /* QuartzCore.framework */; };
+		2149F1BD1780CACC0083349D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2E177E6E4C0002AA46 /* CoreGraphics.framework */; };
 		21845E2B177E6E4C0002AA46 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2A177E6E4C0002AA46 /* UIKit.framework */; };
 		21845E2D177E6E4C0002AA46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2C177E6E4C0002AA46 /* Foundation.framework */; };
 		21845E2F177E6E4C0002AA46 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2E177E6E4C0002AA46 /* CoreGraphics.framework */; };
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2149F1B71780C7E20083349D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		21845E27177E6E4C0002AA46 /* SAMGradientView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAMGradientView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21845E2A177E6E4C0002AA46 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		21845E2C177E6E4C0002AA46 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2149F1BD1780CACC0083349D /* CoreGraphics.framework in Frameworks */,
+				2149F1B81780C7E20083349D /* QuartzCore.framework in Frameworks */,
 				21845E49177E6E4C0002AA46 /* SenTestingKit.framework in Frameworks */,
 				21845E4A177E6E4C0002AA46 /* UIKit.framework in Frameworks */,
 				21845E4B177E6E4C0002AA46 /* Foundation.framework in Frameworks */,
@@ -106,6 +111,7 @@
 		21845E29177E6E4C0002AA46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2149F1B71780C7E20083349D /* QuartzCore.framework */,
 				21845E2A177E6E4C0002AA46 /* UIKit.framework */,
 				21845E2C177E6E4C0002AA46 /* Foundation.framework */,
 				21845E2E177E6E4C0002AA46 /* CoreGraphics.framework */,
@@ -365,6 +371,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Other Sources/SAMGradientView-Prefix.pch";
 				INFOPLIST_FILE = "Example/Resources/SAMGradientView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -376,6 +383,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Other Sources/SAMGradientView-Prefix.pch";
 				INFOPLIST_FILE = "Example/Resources/SAMGradientView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

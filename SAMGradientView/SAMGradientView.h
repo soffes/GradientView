@@ -51,7 +51,7 @@ typedef NS_ENUM(NSUInteger, SAMGradientViewDirection) {
  
  The default is `SSGradientViewDirectionVertical`.
  */
-@property (nonatomic, assign) SAMGradientViewDirection direction;
+@property (nonatomic, assign) SAMGradientViewDirection gradientDirection;
 
 
 ///--------------------------
