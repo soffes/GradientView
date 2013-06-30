@@ -121,7 +121,18 @@ typedef NS_ENUM(NSUInteger, SAMGradientViewDirection) {
 /// @name Creating Gradients
 ///-------------------------
 
+/**
+ Create a CGGradient with an array of UIColors.
+ 
+ @return CGGradientRef
+ */
 extern CGGradientRef SAMGradientCreateWithColors(NSArray *colors) CF_RETURNS_RETAINED;
+
+/**
+ Create a CGGradient with an array of UIColors and NSNumbers for locations.
+ 
+ @return CGGradientRef
+ */
 extern CGGradientRef SAMGradientCreateWithColorsAndLocations(NSArray *colors, NSArray *locations) CF_RETURNS_RETAINED;
 
 
@@ -129,4 +140,7 @@ extern CGGradientRef SAMGradientCreateWithColorsAndLocations(NSArray *colors, NS
 /// @name Drawing Gradients
 ///------------------------
 
+/**
+ Draw a CGGraident into a rect. This handles cliping the gradient for you.
+ */
 extern void SAMDrawGradientInRect(CGContextRef context, CGGradientRef gradient, CGRect rect);
