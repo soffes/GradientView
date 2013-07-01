@@ -20,7 +20,7 @@
 	if (_gradient) {
 		CGGradientRelease(_gradient);
 	}
-	
+
 	_gradient = gradient;
 	[self setNeedsDisplay];
 }
@@ -95,8 +95,7 @@
 #pragma mark - NSObject
 
 - (void)dealloc {
-	CGGradientRelease(_gradient);
-	_gradient = nil;
+	self.gradient = nil;
 }
 
 
@@ -120,7 +119,7 @@
 
 - (void)drawRect:(CGRect)rect {
 	CGContextRef context = UIGraphicsGetCurrentContext();
-	
+
 	CGSize size = self.bounds.size;
 	CGFloat const borderWidth = 1.0f;
 
@@ -131,30 +130,30 @@
 					   CGPointMake(size.width, 0.0f));
 		CGContextDrawLinearGradient(context, self.gradient, start, end, kNilOptions);
 	}
-	
+
 	// Top
 	if (self.topBorderColor) {
 		// Top border
 		CGContextSetFillColorWithColor(context, self.topBorderColor.CGColor);
 		CGContextFillRect(context, CGRectMake(0.0f, 0.0f, size.width, borderWidth));
-		
+
 		// Top inset
 		if (self.topInsetColor) {
 			CGContextSetFillColorWithColor(context, self.topInsetColor.CGColor);
 			CGContextFillRect(context, CGRectMake(0.0f, borderWidth, size.width, borderWidth));
 		}
 	}
-	
+
 	CGFloat sideY = self.topBorderColor ? 1.0f : 0.0f;
 	CGFloat sideHeight = size.height;
 	if (self.topBorderColor) {
 		sideHeight -= 1.0f;
 	}
-	
+
 	if (self.bottomBorderColor) {
 		sideHeight -= 1.0f;
 	}
-	
+
 	// Right
 	if (self.rightBorderColor) {
 		// Right inset
@@ -162,12 +161,12 @@
 			CGContextSetFillColorWithColor(context, self.rightInsetColor.CGColor);
 			CGContextFillRect(context, CGRectMake(size.width - borderWidth - borderWidth, sideY, borderWidth, sideHeight));
 		}
-		
+
 		// Right border
 		CGContextSetFillColorWithColor(context, self.rightBorderColor.CGColor);
 		CGContextFillRect(context, CGRectMake(size.width - borderWidth, sideY, borderWidth, sideHeight));
 	}
-	
+
 	// Bottom
 	if (self.bottomBorderColor) {
 		// Bottom inset
@@ -175,12 +174,12 @@
 			CGContextSetFillColorWithColor(context, self.bottomInsetColor.CGColor);
 			CGContextFillRect(context, CGRectMake(0.0f, rect.size.height - borderWidth - borderWidth, size.width, borderWidth));
 		}
-		
+
 		// Bottom border
 		CGContextSetFillColorWithColor(context, self.bottomBorderColor.CGColor);
 		CGContextFillRect(context, CGRectMake(0.0f, rect.size.height - borderWidth, size.width, borderWidth));
 	}
-	
+
 	// Left
 	if (self.leftBorderColor) {
 		// Left inset
@@ -188,7 +187,7 @@
 			CGContextSetFillColorWithColor(context, self.leftInsetColor.CGColor);
 			CGContextFillRect(context, CGRectMake(borderWidth, sideY, borderWidth, sideHeight));
 		}
-		
+
 		// Left border
 		CGContextSetFillColorWithColor(context, self.leftBorderColor.CGColor);
 		CGContextFillRect(context, CGRectMake(0.0f, sideY, borderWidth, sideHeight));
@@ -222,14 +221,14 @@ CGGradientRef SAMGradientCreateWithColorsAndLocations(NSArray *colors, NSArray *
 	if (colorsCount < 2) {
 		return nil;
 	}
-	
+
 	CGColorSpaceRef colorSpace = CGColorGetColorSpace([[colors objectAtIndex:0] CGColor]);
-	
+
 	NSMutableArray *gradientColors = [[NSMutableArray alloc] initWithCapacity:colorsCount];
 	[colors enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
 		[gradientColors addObject:(id)[(UIColor *)object CGColor]];
 	}];
-	
+
 	CGFloat *gradientLocations = NULL;
 	NSUInteger locationsCount = [locations count];
 	if (locationsCount == colorsCount) {
@@ -238,13 +237,13 @@ CGGradientRef SAMGradientCreateWithColorsAndLocations(NSArray *colors, NSArray *
 			gradientLocations[index] = [object floatValue];
 		}];
 	}
-	
+
 	CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)gradientColors, gradientLocations);
-	
+
 	if (gradientLocations) {
 		free(gradientLocations);
 	}
-	
+
 	return gradient;
 }
 
