@@ -15,7 +15,7 @@
 typedef NS_ENUM(NSUInteger, SAMGradientViewDirection) {
     /** The gradient is verticle. */
 	SAMGradientViewDirectionVertical,
-	
+
 	/** The gradient is horizontal. */
 	SAMGradientViewDirectionHorizontal
 };
@@ -33,14 +33,14 @@ typedef NS_ENUM(NSUInteger, SAMGradientViewDirection) {
 /**
  An array of `UIColor` objects used to draw the gradient. If the value is `nil`, the `backgroundColor` will be drawn
  instead of a gradient.
- 
+
  The default is `nil`.
  */
 @property (nonatomic, copy) NSArray *gradientColors;
 
 /**
  An optional array of `NSNumber` objects defining the location of each gradient stop.
- 
+
  The gradient stops are specified as values between `0` and `1`. The values must be monotonically
  increasing. If `nil`, the stops are spread uniformly across the range. Defaults to `nil`.
  */
@@ -48,8 +48,8 @@ typedef NS_ENUM(NSUInteger, SAMGradientViewDirection) {
 
 /**
  The direction of the gradient.
- 
- The default is `SSGradientViewDirectionVertical`.
+
+ The default is `SAMGradientViewDirectionVertical`.
  */
 @property (nonatomic, assign) SAMGradientViewDirection gradientDirection;
 
@@ -60,56 +60,56 @@ typedef NS_ENUM(NSUInteger, SAMGradientViewDirection) {
 
 /**
  The top border color. The default is `nil`.
- 
+
  @see topInsetColor
  */
 @property (nonatomic, strong) UIColor *topBorderColor;
 
 /**
  The top inset color. The default is `nil`.
- 
+
  @see topBorderColor
  */
 @property (nonatomic, strong) UIColor *topInsetColor;
 
 /**
  The right border color. The default is `nil`.
- 
+
  @see rightInsetColor
  */
 @property (nonatomic, strong) UIColor *rightBorderColor;
 
 /**
  The right inset color. The default is `nil`.
- 
+
  @see rightBorderColor
  */
 @property (nonatomic, strong) UIColor *rightInsetColor;
 
 /**
  The bottom border color. The default is `nil`.
- 
+
  @see bottomInsetColor
  */
 @property (nonatomic, strong) UIColor *bottomBorderColor;
 
 /**
  The bottom inset color. The default is `nil`.
- 
+
  @see bottomBorderColor
  */
 @property (nonatomic, strong) UIColor *bottomInsetColor;
 
 /**
  The left border color. The default is `nil`.
- 
+
  @see leftInsetColor
  */
 @property (nonatomic, strong) UIColor *leftBorderColor;
 
 /**
  The left inset color. The default is `nil`.
- 
+
  @see leftBorderColor
  */
 @property (nonatomic, strong) UIColor *leftInsetColor;
@@ -123,14 +123,14 @@ typedef NS_ENUM(NSUInteger, SAMGradientViewDirection) {
 
 /**
  Create a CGGradient with an array of UIColors.
- 
+
  @return CGGradientRef
  */
 extern CGGradientRef SAMGradientCreateWithColors(NSArray *colors) CF_RETURNS_RETAINED;
 
 /**
  Create a CGGradient with an array of UIColors and NSNumbers for locations.
- 
+
  @return CGGradientRef
  */
 extern CGGradientRef SAMGradientCreateWithColorsAndLocations(NSArray *colors, NSArray *locations) CF_RETURNS_RETAINED;
