@@ -9,12 +9,25 @@
 #import "SAMGradientView.h"
 
 @interface SAMGradientView ()
-@property (nonatomic, assign) CGGradientRef gradient;
+@property (nonatomic) CGGradientRef gradient;
 @end
 
 @implementation SAMGradientView
 
 #pragma mark - Accessors
+
+@synthesize gradient = _gradient;
+@synthesize gradientColors = _gradientColors;
+@synthesize gradientLocations = _gradientLocations;
+@synthesize gradientDirection = _gradientDirection;
+@synthesize topBorderColor = _topBorderColor;
+@synthesize topInsetColor = _topInsetColor;
+@synthesize rightBorderColor = _rightBorderColor;
+@synthesize rightInsetColor = _rightInsetColor;
+@synthesize bottomBorderColor = _bottomBorderColor;
+@synthesize bottomInsetColor = _bottomInsetColor;
+@synthesize leftBorderColor = _leftBorderColor;
+@synthesize leftInsetColor = _leftInsetColor;
 
 - (void)setGradient:(CGGradientRef)gradient {
 	if (_gradient) {

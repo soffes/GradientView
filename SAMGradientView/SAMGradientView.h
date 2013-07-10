@@ -12,13 +12,13 @@
 /**
  The direction the gradient.
  */
-typedef NS_ENUM(NSUInteger, SAMGradientViewDirection) {
+typedef enum : NSUInteger {
     /** The gradient is verticle. */
 	SAMGradientViewDirectionVertical,
 
 	/** The gradient is horizontal. */
 	SAMGradientViewDirectionHorizontal
-};
+} SAMGradientViewDirection;
 
 
 /**
@@ -51,7 +51,7 @@ typedef NS_ENUM(NSUInteger, SAMGradientViewDirection) {
 
  The default is `SAMGradientViewDirectionVertical`.
  */
-@property (nonatomic, assign) SAMGradientViewDirection gradientDirection;
+@property (nonatomic) SAMGradientViewDirection gradientDirection;
 
 
 ///--------------------------
