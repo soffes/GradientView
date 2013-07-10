@@ -1,14 +1,14 @@
-Pod::Spec.new do |s|
-  s.name = 'SAMGradientView'
-  s.version = '0.1.0'
-  s.authors = {'Sam Soffes' => 'sam@soff.es'}
-  s.homepage = 'https://github.com/soffes/SAMGradientView'
-  s.summary = 'Easily use gradients in UIKit.'
-  s.source = {:git => 'https://github.com/soffes/SAMGradientView.git', :tag => 'v0.1.0'}
-  s.license = { :type => 'MIT', :file => 'LICENSE' }
+Pod::Spec.new do |spec|
+  spec.name = 'SAMGradientView'
+  spec.version = '0.1.1'
+  spec.authors = {'Sam Soffes' => 'sam@soff.es'}
+  spec.homepage = 'https://github.com/soffes/SAMGradientView'
+  spec.summary = 'Easily use gradients in UIKit.'
+  spec.source = {:git => 'https://github.com/soffes/SAMGradientView.git', :tag => "v#{spec.version}"}
+  spec.license = { :type => 'MIT', :file => 'LICENSE' }
 
-  s.platform = :ios
-  s.requires_arc = true
-  s.frameworks = 'UIKit', 'CoreGraphics'
-  s.source_files = 'SAMGradientView'
+  spec.platform = :ios
+  spec.requires_arc = true
+  spec.frameworks = 'UIKit', 'CoreGraphics'
+  spec.source_files = 'SAMGradientView'
 end
