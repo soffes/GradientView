@@ -52,6 +52,7 @@ typedef enum : NSUInteger {
  The gradient stops are specified as values between `0` and `1`. The values must be monotonically
  increasing. If `nil`, the stops are spread uniformly across the range. Defaults to `nil`.
  */
+
 @property (nonatomic, copy) NSArray *gradientLocations;
 
 /**
