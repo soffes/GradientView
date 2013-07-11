@@ -9,7 +9,11 @@
 #import "SAMGradientView.h"
 
 @interface SAMGradientView ()
+{
+    NSArray *dimmedGradientColors;
+}
 @property (nonatomic) CGGradientRef gradient;
+
 @end
 
 @implementation SAMGradientView
@@ -17,6 +21,7 @@
 #pragma mark - Accessors
 
 @synthesize gradient = _gradient;
+@synthesize dimmedGradientColors = _dimmedGradientColors;
 @synthesize gradientColors = _gradientColors;
 @synthesize gradientLocations = _gradientLocations;
 @synthesize gradientDirection = _gradientDirection;
@@ -28,6 +33,31 @@
 @synthesize bottomInsetColor = _bottomInsetColor;
 @synthesize leftBorderColor = _leftBorderColor;
 @synthesize leftInsetColor = _leftInsetColor;
+
+
+
+-(void)tintColorDidChange
+{
+    [super tintColorDidChange];
+        
+    if([super tintAdjustmentMode] == UIViewTintAdjustmentModeDimmed){
+        NSArray *swapGradient = [self.gradientColors copy];
+        self.gradientColors = self.dimmedGradientColors;
+        self.dimmedGradientColors = swapGradient;
+    }
+    else if([super tintAdjustmentMode] == UIViewTintAdjustmentModeNormal)
+    {
+        if(self.dimmedGradientColors == nil) {
+            self.dimmedGradientColors = @[[UIColor lightGrayColor], [UIColor grayColor]];
+            //I return here because for some reason the view calles tintColorDidChange when first loaded.
+            return;
+        }
+        NSArray *swapGradient = [self.gradientColors copy];
+        self.gradientColors = self.dimmedGradientColors;
+        self.dimmedGradientColors = swapGradient;
+        
+    }
+}
 
 - (void)setGradient:(CGGradientRef)gradient {
 	if (_gradient) {

@@ -39,6 +39,14 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy) NSArray *gradientColors;
 
 /**
+ An array of `UIColor` objects used to draw the dimmed gradient. If the value is `nil`, the a regular grey gradient will be drawn instead of the coloured gradient.
+ 
+ The default is `nil`.
+ */
+
+@property (nonatomic, copy) NSArray *dimmedGradientColors;
+
+/**
  An optional array of `NSNumber` objects defining the location of each gradient stop.
 
  The gradient stops are specified as values between `0` and `1`. The values must be monotonically
