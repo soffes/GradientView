@@ -9,7 +9,11 @@
 #import "SAMGradientView.h"
 
 @interface SAMGradientView ()
+
+
 @property (nonatomic) CGGradientRef gradient;
+@property (nonatomic)  BOOL firstTimeTintToChange;
+
 @end
 
 @implementation SAMGradientView
@@ -17,6 +21,8 @@
 #pragma mark - Accessors
 
 @synthesize gradient = _gradient;
+@synthesize  firstTimeTintToChange = _firstTimeTintToChange;
+@synthesize dimmedGradientColors = _dimmedGradientColors;
 @synthesize gradientColors = _gradientColors;
 @synthesize gradientLocations = _gradientLocations;
 @synthesize gradientDirection = _gradientDirection;
@@ -28,6 +34,35 @@
 @synthesize bottomInsetColor = _bottomInsetColor;
 @synthesize leftBorderColor = _leftBorderColor;
 @synthesize leftInsetColor = _leftInsetColor;
+
+
+
+-(void)tintColorDidChange
+{
+    [super tintColorDidChange];
+    
+    if([super tintAdjustmentMode] == UIViewTintAdjustmentModeDimmed){
+        NSArray *swapGradient = [self.gradientColors copy];
+        self.gradientColors = self.dimmedGradientColors;
+        self.dimmedGradientColors = swapGradient;
+    }
+    else if([super tintAdjustmentMode] == UIViewTintAdjustmentModeNormal)
+    {
+        if(self.dimmedGradientColors == nil) {
+            self.dimmedGradientColors = @[[UIColor lightGrayColor], [UIColor grayColor]];
+        }
+        //I know this is ugly. But somehow the view calls tintColorDidChange when it first loads.
+        if(self.firstTimeTintToChange)
+        {
+            self.firstTimeTintToChange = NO;
+            return;
+        }
+        NSArray *swapGradient = [self.gradientColors copy];
+        self.gradientColors = self.dimmedGradientColors;
+        self.dimmedGradientColors = swapGradient;
+        
+    }
+}
 
 - (void)setGradient:(CGGradientRef)gradient {
 	if (_gradient) {
@@ -124,6 +159,7 @@
 
 - (id)initWithFrame:(CGRect)frame {
 	if ((self = [super initWithFrame:frame])) {
+        self.firstTimeTintToChange = YES;
 		[self initialize];
 	}
 	return self;

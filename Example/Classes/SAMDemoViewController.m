@@ -22,6 +22,22 @@
 		[UIColor colorWithRed:0.0f green:0.0f blue:0.5f alpha:1.0f]
 	];
 	[self.view addSubview:gradientView];
+    UIButton *showAlertButton = [[UIButton alloc] initWithFrame:CGRectMake(20.0f, 320.0f, 280.0f, 30.0f)];
+    [showAlertButton setTitle:@"Show Alert" forState:UIControlStateNormal];
+    [showAlertButton addTarget:self action:@selector(showAlert:) forControlEvents:UIControlEventTouchUpInside];
+    showAlertButton.backgroundColor = [UIColor redColor];
+
+    [self.view addSubview:showAlertButton];
+}
+-(void) showAlert:(id)sender
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Gradient Dimming!"
+                                                        message:@"As part of iOS7 design language, views should become desaturated when an alert view appears."
+                                                       delegate:self
+                                              cancelButtonTitle:@"close"
+                                              otherButtonTitles:nil, nil];
+    [alertView show];
+
 }
 
 @end
