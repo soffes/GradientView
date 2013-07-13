@@ -9,11 +9,7 @@
 #import "SAMGradientView.h"
 
 @interface SAMGradientView ()
-
-
 @property (nonatomic) CGGradientRef gradient;
-@property (nonatomic)  BOOL firstTimeTintToChange;
-
 @end
 
 @implementation SAMGradientView
@@ -21,8 +17,6 @@
 #pragma mark - Accessors
 
 @synthesize gradient = _gradient;
-@synthesize  firstTimeTintToChange = _firstTimeTintToChange;
-@synthesize dimmedGradientColors = _dimmedGradientColors;
 @synthesize gradientColors = _gradientColors;
 @synthesize gradientLocations = _gradientLocations;
 @synthesize gradientDirection = _gradientDirection;
@@ -35,34 +29,10 @@
 @synthesize leftBorderColor = _leftBorderColor;
 @synthesize leftInsetColor = _leftInsetColor;
 
+#ifdef __IPHONE_7_0
+@synthesize dimmedGradientColors = _dimmedGradientColors;
+#endif
 
-
--(void)tintColorDidChange
-{
-    [super tintColorDidChange];
-    
-    if([super tintAdjustmentMode] == UIViewTintAdjustmentModeDimmed){
-        NSArray *swapGradient = [self.gradientColors copy];
-        self.gradientColors = self.dimmedGradientColors;
-        self.dimmedGradientColors = swapGradient;
-    }
-    else if([super tintAdjustmentMode] == UIViewTintAdjustmentModeNormal)
-    {
-        if(self.dimmedGradientColors == nil) {
-            self.dimmedGradientColors = @[[UIColor lightGrayColor], [UIColor grayColor]];
-        }
-        //I know this is ugly. But somehow the view calls tintColorDidChange when it first loads.
-        if(self.firstTimeTintToChange)
-        {
-            self.firstTimeTintToChange = NO;
-            return;
-        }
-        NSArray *swapGradient = [self.gradientColors copy];
-        self.gradientColors = self.dimmedGradientColors;
-        self.dimmedGradientColors = swapGradient;
-        
-    }
-}
 
 - (void)setGradient:(CGGradientRef)gradient {
 	if (_gradient) {
@@ -90,6 +60,28 @@
 	_gradientDirection = direction;
 	[self setNeedsDisplay];
 }
+
+
+#ifdef __IPHONE_7_0
+- (NSArray *)dimmedGradientColors {
+	if (!_dimmedGradientColors) {
+		NSMutableArray *dimmed = [self.gradientColors mutableCopy];
+		[dimmed enumerateObjectsUsingBlock:^(UIColor *color, NSUInteger index, BOOL *stop) {
+			CGFloat hue, saturation, brightness, alpha;
+			[color getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
+			[dimmed replaceObjectAtIndex:index withObject:[UIColor colorWithHue:hue saturation:0.0f brightness:brightness alpha:alpha]];
+		}];
+		return dimmed;
+	}
+	return _dimmedGradientColors;
+}
+
+
+- (void)setDimmedGradientColors:(NSArray *)colors {
+	_dimmedGradientColors = colors;
+	[self refreshGradient];
+}
+#endif
 
 
 - (void)setTopBorderColor:(UIColor *)topBorderColor {
@@ -159,7 +151,6 @@
 
 - (id)initWithFrame:(CGRect)frame {
 	if ((self = [super initWithFrame:frame])) {
-        self.firstTimeTintToChange = YES;
 		[self initialize];
 	}
 	return self;
@@ -244,6 +235,14 @@
 }
 
 
+#ifdef __IPHONE_7_0
+- (void)tintColorDidChange {
+    [super tintColorDidChange];
+	[self refreshGradient];
+}
+#endif
+
+
 #pragma mark - Private
 
 - (void)initialize {
@@ -252,6 +251,13 @@
 
 
 - (void)refreshGradient {
+#ifdef __IPHONE_7_0
+	if (self.tintAdjustmentMode == UIViewTintAdjustmentModeDimmed) {
+		NSArray *locations = self.dimmedGradientColors.count == self.gradientLocations.count ? self.gradientLocations : nil;
+		self.gradient = SAMGradientCreateWithColorsAndLocations(self.dimmedGradientColors, locations);
+		return;
+	}
+#endif
 	self.gradient = SAMGradientCreateWithColorsAndLocations(self.gradientColors, self.gradientLocations);
 }
 

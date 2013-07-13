@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <Availability.h>
 
 /**
  The direction the gradient.
@@ -38,13 +39,16 @@ typedef enum : NSUInteger {
  */
 @property (nonatomic, copy) NSArray *gradientColors;
 
+#ifdef __IPHONE_7_0
 /**
- An array of `UIColor` objects used to draw the dimmed gradient. If the value is `nil`, the a regular grey gradient will be drawn instead of the coloured gradient.
+ An array of `UIColor` objects used to draw the dimmed gradient. If the value is `nil`, `gradientColors` will be
+ converted to grayscale.
  
  The default is `nil`.
  */
 
 @property (nonatomic, copy) NSArray *dimmedGradientColors;
+#endif
 
 /**
  An optional array of `NSNumber` objects defining the location of each gradient stop.
