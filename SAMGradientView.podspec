@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'SAMGradientView'
-  spec.version = '0.1.1'
+  spec.version = '0.1.2'
   spec.authors = {'Sam Soffes' => 'sam@soff.es'}
   spec.homepage = 'https://github.com/soffes/SAMGradientView'
   spec.summary = 'Easily use gradients in UIKit.'
