@@ -72,6 +72,13 @@ typedef enum : NSUInteger {
 ///--------------------------
 
 /**
+ Use thin borders.
+
+ 1px borders will be drawn instead of 1pt borders. The default is `NO`.
+ */
+@property (nonatomic) BOOL useThinBorders;
+
+/**
  The top border color. The default is `nil`.
 
  @see topInsetColor

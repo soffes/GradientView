@@ -20,6 +20,7 @@
 @synthesize gradientColors = _gradientColors;
 @synthesize gradientLocations = _gradientLocations;
 @synthesize gradientDirection = _gradientDirection;
+@synthesize useThinBorders = _useThinBorders;
 @synthesize topBorderColor = _topBorderColor;
 @synthesize topInsetColor = _topInsetColor;
 @synthesize rightBorderColor = _rightBorderColor;
@@ -82,6 +83,12 @@
 	[self refreshGradient];
 }
 #endif
+
+
+- (void)setUseThinBorders:(BOOL)useThinBorders {
+	_useThinBorders = useThinBorders;
+	[self setNeedsDisplay];
+}
 
 
 - (void)setTopBorderColor:(UIColor *)topBorderColor {
@@ -161,7 +168,7 @@
 	CGContextRef context = UIGraphicsGetCurrentContext();
 
 	CGSize size = self.bounds.size;
-	CGFloat const borderWidth = 1.0f;
+	CGFloat borderWidth = self.useThinBorders ? 1.0f / [[UIScreen mainScreen] scale] : 1.0f;
 
 	// Gradient
 	if (self.gradient) {
@@ -184,14 +191,14 @@
 		}
 	}
 
-	CGFloat sideY = self.topBorderColor ? 1.0f : 0.0f;
+	CGFloat sideY = self.topBorderColor ? borderWidth : 0.0f;
 	CGFloat sideHeight = size.height;
 	if (self.topBorderColor) {
-		sideHeight -= 1.0f;
+		sideHeight -= borderWidth;
 	}
 
 	if (self.bottomBorderColor) {
-		sideHeight -= 1.0f;
+		sideHeight -= borderWidth;
 	}
 
 	// Right
@@ -252,7 +259,7 @@
 
 - (void)refreshGradient {
 #ifdef __IPHONE_7_0
-	if (self.tintAdjustmentMode == UIViewTintAdjustmentModeDimmed) {
+	if ([self respondsToSelector:@selector(tintAdjustmentMode)] && self.tintAdjustmentMode == UIViewTintAdjustmentModeDimmed) {
 		NSArray *locations = self.dimmedGradientColors.count == self.gradientLocations.count ? self.gradientLocations : nil;
 		self.gradient = SAMGradientCreateWithColorsAndLocations(self.dimmedGradientColors, locations);
 		return;
