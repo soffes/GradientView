@@ -29,6 +29,8 @@
 @synthesize bottomInsetColor = _bottomInsetColor;
 @synthesize leftBorderColor = _leftBorderColor;
 @synthesize leftInsetColor = _leftInsetColor;
+@synthesize gradientStartPoint = _gradientStartPoint;
+@synthesize gradientEndPoint = _gradientEndPoint;
 
 #ifdef __IPHONE_7_0
 @synthesize dimmedGradientColors = _dimmedGradientColors;
@@ -173,11 +175,23 @@
 	// Gradient
 	if (self.gradient) {
 		CGPoint start = CGPointMake(0.0f, 0.0f);
-		CGPoint end = (self.gradientDirection == SAMGradientViewDirectionVertical ? CGPointMake(0.0f, size.height) :
-					   CGPointMake(size.width, 0.0f));
-		CGContextDrawLinearGradient(context, self.gradient, start, end, kNilOptions);
+		CGPoint end;
+		
+		switch (self.gradientDirection) {
+			case SAMGradientViewDirectionVertical:
+				end = CGPointMake(0.0f, size.height);
+				CGContextDrawLinearGradient(context, self.gradient, start, end, kNilOptions);
+				break;
+			case SAMGradientViewDirectionHorizontal:
+				end = CGPointMake(size.width, 0.0f);
+				CGContextDrawLinearGradient(context, self.gradient, start, end, kNilOptions);
+				break;
+			case SAMGradientViewDirectionTwoPoints:
+				CGContextDrawLinearGradient(context, self.gradient, self.gradientStartPoint, self.gradientEndPoint, kCGGradientDrawsBeforeStartLocation | kCGGradientDrawsAfterEndLocation);
+				break;
+		}
 	}
-
+	
 	// Top
 	if (self.topBorderColor) {
 		// Top border
