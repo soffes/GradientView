@@ -53,11 +53,14 @@ typedef enum : NSUInteger {
 #endif
 
 /**
- Starting point of gradient osed only if `gradientDirection` is set to `SAMGradientViewDirectionTwoPoints`
+ Starting point of gradient used only if `gradientDirection` is set to `SAMGradientViewDirectionTwoPoints`
  */
 
 @property (nonatomic, assign) CGPoint gradientStartPoint;
 
+/**
+ Ending point of gradient used only if `gradientDirection` is set to `SAMGradientViewDirectionTwoPoints`
+ */
 @property (nonatomic, assign) CGPoint gradientEndPoint;
 
 /**
