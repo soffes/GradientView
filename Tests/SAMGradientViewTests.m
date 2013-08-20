@@ -74,10 +74,13 @@
 	CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
 	CGContextRelease(context);
 	int index = (bytesPerRow * point.y) + point.x * bytesPerPixel;
+
+  
+	// Create and return the color
+  UIColor *result = [UIColor colorWithRed:(CGFloat)data[index] / 255.0f green:(CGFloat)data[index + 1] / 255.0f blue:(CGFloat)data[index + 2] / 255.0f alpha:(CGFloat)data[index + 3] / 255.0f];
 	free(data);
 
-	// Create and return the color
-	return [UIColor colorWithRed:(CGFloat)data[index] / 255.0f green:(CGFloat)data[index + 1] / 255.0f blue:(CGFloat)data[index + 2] / 255.0f alpha:(CGFloat)data[index + 3] / 255.0f];
+	return result;
 }
 
 @end
