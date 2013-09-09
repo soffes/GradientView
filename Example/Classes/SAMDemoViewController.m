@@ -26,7 +26,7 @@
 	gradientView.gradientLocations = @[@0.0, @0.25, @0.5, @0.75, @1.0];
 	gradientView.gradientStartPoint = CGPointMake(280, 0);
 	gradientView.gradientEndPoint = CGPointMake(0, 280);
-	gradientView.gradientDirection = SAMGradientViewDirectionTwoPoints;
+	gradientView.gradientDirection = SAMGradientViewDirectionNone;
 	
 	[self.view addSubview:gradientView];
 
