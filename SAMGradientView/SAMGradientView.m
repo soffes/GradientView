@@ -186,7 +186,7 @@
 				end = CGPointMake(size.width, 0.0f);
 				CGContextDrawLinearGradient(context, self.gradient, start, end, kNilOptions);
 				break;
-			case SAMGradientViewDirectionTwoPoints:
+			case SAMGradientViewDirectionNone:
 				CGContextDrawLinearGradient(context, self.gradient, self.gradientStartPoint, self.gradientEndPoint, kCGGradientDrawsBeforeStartLocation | kCGGradientDrawsAfterEndLocation);
 				break;
 		}

@@ -20,7 +20,7 @@ typedef enum : NSUInteger {
 	/** The gradient is horizontal. */
 	SAMGradientViewDirectionHorizontal,
 	/** The gradient is build based on gradientStartPoint and gradientEndPoint. */
-	SAMGradientViewDirectionTwoPoints
+	SAMGradientViewDirectionNone
 } SAMGradientViewDirection;
 
 
