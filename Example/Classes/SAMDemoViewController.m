@@ -17,15 +17,21 @@
 	
 	self.title = @"Gradient View";
 	
-	SAMGradientView *gradientView = [[SAMGradientView alloc] initWithFrame:CGRectMake(20.0f, 20.0f, 280.0f, 280.0f)];
+	SAMGradientView *gradientView = [[SAMGradientView alloc] initWithFrame:CGRectMake(20.0f, 70.0f, 280.0f, 280.0f)];
 	gradientView.gradientColors = @[
 		[UIColor colorWithRed:0.0f green:0.0f blue:1.0f alpha:1.0f],
-		[UIColor colorWithRed:0.0f green:0.0f blue:0.5f alpha:1.0f]
+		[UIColor colorWithRed:0.0f green:0.0f blue:0.5f alpha:1.0f],
+		[UIColor colorWithRed:0.0f green:0.0f blue:1.0f alpha:1.0f]
 	];
+	gradientView.gradientLocations = @[@0.0, @0.25, @0.5, @0.75, @1.0];
+	gradientView.gradientStartPoint = CGPointMake(280, 0);
+	gradientView.gradientEndPoint = CGPointMake(0, 280);
+	gradientView.gradientDirection = SAMGradientViewDirectionNone;
+	
 	[self.view addSubview:gradientView];
 
 #ifdef __IPHONE_7_0
-    UIButton *showAlertButton = [[UIButton alloc] initWithFrame:CGRectMake(20.0f, 320.0f, 280.0f, 30.0f)];
+    UIButton *showAlertButton = [[UIButton alloc] initWithFrame:CGRectMake(20.0f, 370.0f, 280.0f, 30.0f)];
     [showAlertButton setTitle:@"Show Alert" forState:UIControlStateNormal];
     [showAlertButton addTarget:self action:@selector(showAlert:) forControlEvents:UIControlEventTouchUpInside];
     showAlertButton.backgroundColor = [UIColor redColor];

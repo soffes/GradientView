@@ -18,7 +18,9 @@ typedef enum : NSUInteger {
 	SAMGradientViewDirectionVertical,
 
 	/** The gradient is horizontal. */
-	SAMGradientViewDirectionHorizontal
+	SAMGradientViewDirectionHorizontal,
+	/** The gradient is build based on gradientStartPoint and gradientEndPoint. */
+	SAMGradientViewDirectionNone
 } SAMGradientViewDirection;
 
 
@@ -49,6 +51,17 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, copy) NSArray *dimmedGradientColors;
 #endif
+
+/**
+ Starting point of gradient used only if `gradientDirection` is set to `SAMGradientViewDirectionTwoPoints`
+ */
+
+@property (nonatomic, assign) CGPoint gradientStartPoint;
+
+/**
+ Ending point of gradient used only if `gradientDirection` is set to `SAMGradientViewDirectionTwoPoints`
+ */
+@property (nonatomic, assign) CGPoint gradientEndPoint;
 
 /**
  An optional array of `NSNumber` objects defining the location of each gradient stop.
