@@ -6,10 +6,18 @@
 //  Copyright (c) 2013 Sam Soffes. All rights reserved.
 //
 
-#import "SAMGradientViewTests.h"
-#import <QuartzCore/QuartzCore.h>
+#import <XCTest/XCTest.h>
+#import <UIKit/UIKit.h>
+#import <CoreGraphics/CoreGraphics.h>
+#import "SAMGradientView.h"
+
+@interface SAMGradientViewTests : XCTestCase
+@property (nonatomic, strong) SAMGradientView *gradientView;
+@end
 
 @implementation SAMGradientViewTests
+
+@synthesize gradientView = _gradientView;
 
 - (void)setUp {
 	[super setUp];
@@ -20,37 +28,37 @@
 
 - (void)testTopInset {
 	self.gradientView.topInsetColor = [UIColor redColor];
-	STAssertEqualObjects(self.gradientView.backgroundColor, [self colorAtPoint:CGPointMake(0.0f, 1.0f)], nil);
+	XCTAssertEqualObjects(self.gradientView.backgroundColor, [self colorAtPoint:CGPointMake(0.0f, 1.0f)], @"");
 
-	self.gradientView.topBorderColor = [UIColor greenColor];
-	STAssertEqualObjects(self.gradientView.topInsetColor, [self colorAtPoint:CGPointMake(0.0f, 1.0f)], nil);
+	self.gradientView.topBorderColor = [UIColor blueColor];
+	XCTAssertEqualObjects(self.gradientView.topInsetColor, [self colorAtPoint:CGPointMake(0.0f, 1.0f)], @"");
 }
 
 
 - (void)testRightBorder {
 	self.gradientView.rightBorderColor = [UIColor redColor];
-	STAssertEqualObjects(self.gradientView.rightBorderColor, [self colorAtPoint:CGPointMake(9.0f, 0.0f)], nil);
+	XCTAssertEqualObjects(self.gradientView.rightBorderColor, [self colorAtPoint:CGPointMake(9.0f, 0.0f)], @"");
 }
 
 
 - (void)testBottomBorder {
 	self.gradientView.bottomBorderColor = [UIColor redColor];
-	STAssertEqualObjects(self.gradientView.bottomBorderColor, [self colorAtPoint:CGPointMake(0.0f, 9.0f)], nil);
+	XCTAssertEqualObjects(self.gradientView.bottomBorderColor, [self colorAtPoint:CGPointMake(0.0f, 9.0f)], @"");
 }
 
 
 - (void)testBottomInset {
 	self.gradientView.bottomInsetColor = [UIColor redColor];
-	STAssertEqualObjects(self.gradientView.backgroundColor, [self colorAtPoint:CGPointMake(0.0f, 8.0f)], nil);
+	XCTAssertEqualObjects(self.gradientView.backgroundColor, [self colorAtPoint:CGPointMake(0.0f, 8.0f)], @"");
 
-	self.gradientView.bottomBorderColor = [UIColor greenColor];
-	STAssertEqualObjects(self.gradientView.bottomInsetColor, [self colorAtPoint:CGPointMake(0.0f, 8.0f)], nil);
+	self.gradientView.bottomBorderColor = [UIColor blueColor];
+	XCTAssertEqualObjects(self.gradientView.bottomInsetColor, [self colorAtPoint:CGPointMake(0.0f, 8.0f)], @"");
 }
 
 
 - (void)testLeftBorder {
 	self.gradientView.leftBorderColor = [UIColor redColor];
-	STAssertEqualObjects(self.gradientView.leftBorderColor, [self colorAtPoint:CGPointMake(0.0f, 1.0f)], nil);
+	XCTAssertEqualObjects(self.gradientView.leftBorderColor, [self colorAtPoint:CGPointMake(0.0f, 1.0f)], @"");
 }
 
 

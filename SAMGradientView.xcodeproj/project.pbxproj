@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2149F1B81780C7E20083349D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2149F1B71780C7E20083349D /* QuartzCore.framework */; };
-		2149F1BD1780CACC0083349D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2E177E6E4C0002AA46 /* CoreGraphics.framework */; };
+		21481D1417DF894D0097D476 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2149F1B71780C7E20083349D /* QuartzCore.framework */; };
+		21481D1517DF89530097D476 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2E177E6E4C0002AA46 /* CoreGraphics.framework */; };
+		21481D1617DF89570097D476 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2A177E6E4C0002AA46 /* UIKit.framework */; };
+		21481D1717DF895C0097D476 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2C177E6E4C0002AA46 /* Foundation.framework */; };
+		21481D1817DF89C30097D476 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21481D1117DF85D90097D476 /* XCTest.framework */; };
 		21845E2B177E6E4C0002AA46 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2A177E6E4C0002AA46 /* UIKit.framework */; };
 		21845E2D177E6E4C0002AA46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2C177E6E4C0002AA46 /* Foundation.framework */; };
 		21845E2F177E6E4C0002AA46 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2E177E6E4C0002AA46 /* CoreGraphics.framework */; };
-		21845E49177E6E4C0002AA46 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E48177E6E4C0002AA46 /* SenTestingKit.framework */; };
-		21845E4A177E6E4C0002AA46 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2A177E6E4C0002AA46 /* UIKit.framework */; };
-		21845E4B177E6E4C0002AA46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2C177E6E4C0002AA46 /* Foundation.framework */; };
 		21845E6A177E6EEC0002AA46 /* SAMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21845E61177E6EEC0002AA46 /* SAMAppDelegate.m */; };
 		21845E6B177E6EEC0002AA46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21845E63177E6EEC0002AA46 /* main.m */; };
 		21845E6C177E6EEC0002AA46 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21845E66177E6EEC0002AA46 /* Default-568h@2x.png */; };
@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21481D1117DF85D90097D476 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2149F1B71780C7E20083349D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		21845E27177E6E4C0002AA46 /* SAMGradientView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAMGradientView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21845E2A177E6E4C0002AA46 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -52,7 +53,6 @@
 		21845E68177E6EEC0002AA46 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		21845E69177E6EEC0002AA46 /* SAMGradientView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SAMGradientView-Info.plist"; sourceTree = "<group>"; };
 		21845E71177E6EF50002AA46 /* SAMGradientViewTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SAMGradientViewTests-Info.plist"; sourceTree = "<group>"; };
-		21845E72177E6EF50002AA46 /* SAMGradientViewTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMGradientViewTests.h; sourceTree = "<group>"; };
 		21845E73177E6EF50002AA46 /* SAMGradientViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMGradientViewTests.m; sourceTree = "<group>"; };
 		21845E77177E6F0B0002AA46 /* SAMGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMGradientView.h; sourceTree = "<group>"; };
 		21845E78177E6F0B0002AA46 /* SAMGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMGradientView.m; sourceTree = "<group>"; };
@@ -75,11 +75,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2149F1BD1780CACC0083349D /* CoreGraphics.framework in Frameworks */,
-				2149F1B81780C7E20083349D /* QuartzCore.framework in Frameworks */,
-				21845E49177E6E4C0002AA46 /* SenTestingKit.framework in Frameworks */,
-				21845E4A177E6E4C0002AA46 /* UIKit.framework in Frameworks */,
-				21845E4B177E6E4C0002AA46 /* Foundation.framework in Frameworks */,
+				21481D1817DF89C30097D476 /* XCTest.framework in Frameworks */,
+				21481D1717DF895C0097D476 /* Foundation.framework in Frameworks */,
+				21481D1617DF89570097D476 /* UIKit.framework in Frameworks */,
+				21481D1517DF89530097D476 /* CoreGraphics.framework in Frameworks */,
+				21481D1417DF894D0097D476 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +111,7 @@
 		21845E29177E6E4C0002AA46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				21481D1117DF85D90097D476 /* XCTest.framework */,
 				2149F1B71780C7E20083349D /* QuartzCore.framework */,
 				21845E2A177E6E4C0002AA46 /* UIKit.framework */,
 				21845E2C177E6E4C0002AA46 /* Foundation.framework */,
@@ -158,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				21845E71177E6EF50002AA46 /* SAMGradientViewTests-Info.plist */,
-				21845E72177E6EF50002AA46 /* SAMGradientViewTests.h */,
 				21845E73177E6EF50002AA46 /* SAMGradientViewTests.m */,
 			);
 			path = Tests;
@@ -332,7 +332,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -358,7 +358,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -396,12 +396,18 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SAMGradientView.app/SAMGradientView";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\\\"$(SDKROOT)/Developer/Library/Frameworks\\\"",
+					"\\\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\\\"",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				INFOPLIST_FILE = "Tests/SAMGradientViewTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				WARNING_CFLAGS = (
+					"-Weverything",
+					"-Wno-variadic-macros",
+					"-Wno-gnu",
+				);
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -411,12 +417,18 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SAMGradientView.app/SAMGradientView";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\\\"$(SDKROOT)/Developer/Library/Frameworks\\\"",
+					"\\\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\\\"",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				INFOPLIST_FILE = "Tests/SAMGradientViewTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				WARNING_CFLAGS = (
+					"-Weverything",
+					"-Wno-variadic-macros",
+					"-Wno-gnu",
+				);
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
