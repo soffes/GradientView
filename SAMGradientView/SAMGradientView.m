@@ -258,6 +258,7 @@
 
 
 - (void)refreshGradient {
+#ifndef __clang_analyzer__ // It thinks the CGGradient is leaking, but we manage it in the property, so it's all good.
 #ifdef __IPHONE_7_0
 	if ([self respondsToSelector:@selector(tintAdjustmentMode)] && self.tintAdjustmentMode == UIViewTintAdjustmentModeDimmed) {
 		NSArray *locations = self.dimmedGradientColors.count == self.gradientLocations.count ? self.gradientLocations : nil;
@@ -266,6 +267,7 @@
 	}
 #endif
 	self.gradient = SAMGradientCreateWithColorsAndLocations(self.gradientColors, self.gradientLocations);
+#endif
 }
 
 @end
