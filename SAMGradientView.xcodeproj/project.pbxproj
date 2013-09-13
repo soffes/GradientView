@@ -7,182 +7,180 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21481D1417DF894D0097D476 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2149F1B71780C7E20083349D /* QuartzCore.framework */; };
-		21481D1517DF89530097D476 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2E177E6E4C0002AA46 /* CoreGraphics.framework */; };
-		21481D1617DF89570097D476 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2A177E6E4C0002AA46 /* UIKit.framework */; };
-		21481D1717DF895C0097D476 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2C177E6E4C0002AA46 /* Foundation.framework */; };
-		21481D1817DF89C30097D476 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21481D1117DF85D90097D476 /* XCTest.framework */; };
-		21845E2B177E6E4C0002AA46 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2A177E6E4C0002AA46 /* UIKit.framework */; };
-		21845E2D177E6E4C0002AA46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2C177E6E4C0002AA46 /* Foundation.framework */; };
-		21845E2F177E6E4C0002AA46 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21845E2E177E6E4C0002AA46 /* CoreGraphics.framework */; };
-		21845E6A177E6EEC0002AA46 /* SAMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21845E61177E6EEC0002AA46 /* SAMAppDelegate.m */; };
-		21845E6B177E6EEC0002AA46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21845E63177E6EEC0002AA46 /* main.m */; };
-		21845E6C177E6EEC0002AA46 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21845E66177E6EEC0002AA46 /* Default-568h@2x.png */; };
-		21845E6D177E6EEC0002AA46 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 21845E67177E6EEC0002AA46 /* Default.png */; };
-		21845E6E177E6EEC0002AA46 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21845E68177E6EEC0002AA46 /* Default@2x.png */; };
-		21845E79177E6F0B0002AA46 /* SAMGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21845E78177E6F0B0002AA46 /* SAMGradientView.m */; };
-		21845E7B177E6F630002AA46 /* SAMGradientViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21845E73177E6EF50002AA46 /* SAMGradientViewTests.m */; };
-		21845E7E177E722D0002AA46 /* SAMDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21845E7D177E722D0002AA46 /* SAMDemoViewController.m */; };
+		214A998017E3D6C200B85B3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214A997F17E3D6C200B85B3E /* Foundation.framework */; };
+		214A998217E3D6C200B85B3E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214A998117E3D6C200B85B3E /* CoreGraphics.framework */; };
+		214A998417E3D6C200B85B3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214A998317E3D6C200B85B3E /* UIKit.framework */; };
+		214A999917E3D6C200B85B3E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214A999817E3D6C200B85B3E /* XCTest.framework */; };
+		214A999A17E3D6C200B85B3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214A997F17E3D6C200B85B3E /* Foundation.framework */; };
+		214A999B17E3D6C200B85B3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214A998317E3D6C200B85B3E /* UIKit.framework */; };
+		214A99B117E3D6DA00B85B3E /* SAMGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A99B017E3D6DA00B85B3E /* SAMGradientView.m */; };
+		214A99B217E3D6DA00B85B3E /* SAMGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A99B017E3D6DA00B85B3E /* SAMGradientView.m */; };
+		214A99C117E3D6DF00B85B3E /* SAMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A99B617E3D6DF00B85B3E /* SAMAppDelegate.m */; };
+		214A99C217E3D6DF00B85B3E /* SAMDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A99B817E3D6DF00B85B3E /* SAMDemoViewController.m */; };
+		214A99C317E3D6DF00B85B3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A99BA17E3D6DF00B85B3E /* main.m */; };
+		214A99C417E3D6DF00B85B3E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 214A99BD17E3D6DF00B85B3E /* Default-568h@2x.png */; };
+		214A99C517E3D6DF00B85B3E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 214A99BE17E3D6DF00B85B3E /* Default.png */; };
+		214A99C617E3D6DF00B85B3E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 214A99BF17E3D6DF00B85B3E /* Default@2x.png */; };
+		214A99CC17E3D6E300B85B3E /* SAMGradientViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A99CA17E3D6E300B85B3E /* SAMGradientViewTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		21845E4C177E6E4C0002AA46 /* PBXContainerItemProxy */ = {
+		214A999C17E3D6C200B85B3E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 21845E1F177E6E4C0002AA46 /* Project object */;
+			containerPortal = 214A997417E3D6C200B85B3E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 21845E26177E6E4C0002AA46;
+			remoteGlobalIDString = 214A997B17E3D6C200B85B3E;
 			remoteInfo = SAMGradientView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		21481D1117DF85D90097D476 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		2149F1B71780C7E20083349D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		21845E27177E6E4C0002AA46 /* SAMGradientView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAMGradientView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		21845E2A177E6E4C0002AA46 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		21845E2C177E6E4C0002AA46 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		21845E2E177E6E4C0002AA46 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		21845E47177E6E4C0002AA46 /* SAMGradientViewTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAMGradientViewTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		21845E48177E6E4C0002AA46 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		21845E60177E6EEC0002AA46 /* SAMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMAppDelegate.h; sourceTree = "<group>"; };
-		21845E61177E6EEC0002AA46 /* SAMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMAppDelegate.m; sourceTree = "<group>"; };
-		21845E63177E6EEC0002AA46 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		21845E64177E6EEC0002AA46 /* SAMGradientView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SAMGradientView-Prefix.pch"; sourceTree = "<group>"; };
-		21845E66177E6EEC0002AA46 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		21845E67177E6EEC0002AA46 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		21845E68177E6EEC0002AA46 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		21845E69177E6EEC0002AA46 /* SAMGradientView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SAMGradientView-Info.plist"; sourceTree = "<group>"; };
-		21845E71177E6EF50002AA46 /* SAMGradientViewTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SAMGradientViewTests-Info.plist"; sourceTree = "<group>"; };
-		21845E73177E6EF50002AA46 /* SAMGradientViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMGradientViewTests.m; sourceTree = "<group>"; };
-		21845E77177E6F0B0002AA46 /* SAMGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMGradientView.h; sourceTree = "<group>"; };
-		21845E78177E6F0B0002AA46 /* SAMGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMGradientView.m; sourceTree = "<group>"; };
-		21845E7C177E722D0002AA46 /* SAMDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMDemoViewController.h; sourceTree = "<group>"; };
-		21845E7D177E722D0002AA46 /* SAMDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMDemoViewController.m; sourceTree = "<group>"; };
+		214A997C17E3D6C200B85B3E /* SAMGradientView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAMGradientView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		214A997F17E3D6C200B85B3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		214A998117E3D6C200B85B3E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		214A998317E3D6C200B85B3E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		214A999717E3D6C200B85B3E /* SAMGradientViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAMGradientViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		214A999817E3D6C200B85B3E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		214A99AF17E3D6DA00B85B3E /* SAMGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMGradientView.h; sourceTree = "<group>"; };
+		214A99B017E3D6DA00B85B3E /* SAMGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMGradientView.m; sourceTree = "<group>"; };
+		214A99B517E3D6DF00B85B3E /* SAMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMAppDelegate.h; sourceTree = "<group>"; };
+		214A99B617E3D6DF00B85B3E /* SAMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMAppDelegate.m; sourceTree = "<group>"; };
+		214A99B717E3D6DF00B85B3E /* SAMDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMDemoViewController.h; sourceTree = "<group>"; };
+		214A99B817E3D6DF00B85B3E /* SAMDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMDemoViewController.m; sourceTree = "<group>"; };
+		214A99BA17E3D6DF00B85B3E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		214A99BB17E3D6DF00B85B3E /* SAMGradientView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SAMGradientView-Prefix.pch"; sourceTree = "<group>"; };
+		214A99BD17E3D6DF00B85B3E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		214A99BE17E3D6DF00B85B3E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		214A99BF17E3D6DF00B85B3E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		214A99C017E3D6DF00B85B3E /* SAMGradientView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SAMGradientView-Info.plist"; sourceTree = "<group>"; };
+		214A99C917E3D6E300B85B3E /* SAMGradientViewTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SAMGradientViewTests-Info.plist"; sourceTree = "<group>"; };
+		214A99CA17E3D6E300B85B3E /* SAMGradientViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMGradientViewTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		21845E24177E6E4C0002AA46 /* Frameworks */ = {
+		214A997917E3D6C200B85B3E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21845E2B177E6E4C0002AA46 /* UIKit.framework in Frameworks */,
-				21845E2D177E6E4C0002AA46 /* Foundation.framework in Frameworks */,
-				21845E2F177E6E4C0002AA46 /* CoreGraphics.framework in Frameworks */,
+				214A998217E3D6C200B85B3E /* CoreGraphics.framework in Frameworks */,
+				214A998417E3D6C200B85B3E /* UIKit.framework in Frameworks */,
+				214A998017E3D6C200B85B3E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21845E43177E6E4C0002AA46 /* Frameworks */ = {
+		214A999417E3D6C200B85B3E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21481D1817DF89C30097D476 /* XCTest.framework in Frameworks */,
-				21481D1717DF895C0097D476 /* Foundation.framework in Frameworks */,
-				21481D1617DF89570097D476 /* UIKit.framework in Frameworks */,
-				21481D1517DF89530097D476 /* CoreGraphics.framework in Frameworks */,
-				21481D1417DF894D0097D476 /* QuartzCore.framework in Frameworks */,
+				214A999917E3D6C200B85B3E /* XCTest.framework in Frameworks */,
+				214A999B17E3D6C200B85B3E /* UIKit.framework in Frameworks */,
+				214A999A17E3D6C200B85B3E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		21845E1E177E6E4C0002AA46 = {
+		214A997317E3D6C200B85B3E = {
 			isa = PBXGroup;
 			children = (
-				21845E76177E6EFB0002AA46 /* SAMGradientView */,
-				21845E5F177E6EEC0002AA46 /* Classes */,
-				21845E62177E6EEC0002AA46 /* Other Sources */,
-				21845E65177E6EEC0002AA46 /* Resources */,
-				21845E70177E6EF50002AA46 /* Tests */,
-				21845E29177E6E4C0002AA46 /* Frameworks */,
-				21845E28177E6E4C0002AA46 /* Products */,
+				214A99AE17E3D6DA00B85B3E /* SAMGradientView */,
+				214A99B317E3D6DF00B85B3E /* Example */,
+				214A99C817E3D6E300B85B3E /* Tests */,
+				214A997E17E3D6C200B85B3E /* Frameworks */,
+				214A997D17E3D6C200B85B3E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		21845E28177E6E4C0002AA46 /* Products */ = {
+		214A997D17E3D6C200B85B3E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				21845E27177E6E4C0002AA46 /* SAMGradientView.app */,
-				21845E47177E6E4C0002AA46 /* SAMGradientViewTests.octest */,
+				214A997C17E3D6C200B85B3E /* SAMGradientView.app */,
+				214A999717E3D6C200B85B3E /* SAMGradientViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		21845E29177E6E4C0002AA46 /* Frameworks */ = {
+		214A997E17E3D6C200B85B3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				21481D1117DF85D90097D476 /* XCTest.framework */,
-				2149F1B71780C7E20083349D /* QuartzCore.framework */,
-				21845E2A177E6E4C0002AA46 /* UIKit.framework */,
-				21845E2C177E6E4C0002AA46 /* Foundation.framework */,
-				21845E2E177E6E4C0002AA46 /* CoreGraphics.framework */,
-				21845E48177E6E4C0002AA46 /* SenTestingKit.framework */,
+				214A997F17E3D6C200B85B3E /* Foundation.framework */,
+				214A998117E3D6C200B85B3E /* CoreGraphics.framework */,
+				214A998317E3D6C200B85B3E /* UIKit.framework */,
+				214A999817E3D6C200B85B3E /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		21845E5F177E6EEC0002AA46 /* Classes */ = {
+		214A99AE17E3D6DA00B85B3E /* SAMGradientView */ = {
 			isa = PBXGroup;
 			children = (
-				21845E60177E6EEC0002AA46 /* SAMAppDelegate.h */,
-				21845E61177E6EEC0002AA46 /* SAMAppDelegate.m */,
-				21845E7C177E722D0002AA46 /* SAMDemoViewController.h */,
-				21845E7D177E722D0002AA46 /* SAMDemoViewController.m */,
-			);
-			name = Classes;
-			path = Example/Classes;
-			sourceTree = SOURCE_ROOT;
-		};
-		21845E62177E6EEC0002AA46 /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				21845E63177E6EEC0002AA46 /* main.m */,
-				21845E64177E6EEC0002AA46 /* SAMGradientView-Prefix.pch */,
-			);
-			name = "Other Sources";
-			path = "Example/Other Sources";
-			sourceTree = SOURCE_ROOT;
-		};
-		21845E65177E6EEC0002AA46 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				21845E66177E6EEC0002AA46 /* Default-568h@2x.png */,
-				21845E67177E6EEC0002AA46 /* Default.png */,
-				21845E68177E6EEC0002AA46 /* Default@2x.png */,
-				21845E69177E6EEC0002AA46 /* SAMGradientView-Info.plist */,
-			);
-			name = Resources;
-			path = Example/Resources;
-			sourceTree = SOURCE_ROOT;
-		};
-		21845E70177E6EF50002AA46 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				21845E71177E6EF50002AA46 /* SAMGradientViewTests-Info.plist */,
-				21845E73177E6EF50002AA46 /* SAMGradientViewTests.m */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		21845E76177E6EFB0002AA46 /* SAMGradientView */ = {
-			isa = PBXGroup;
-			children = (
-				21845E77177E6F0B0002AA46 /* SAMGradientView.h */,
-				21845E78177E6F0B0002AA46 /* SAMGradientView.m */,
+				214A99AF17E3D6DA00B85B3E /* SAMGradientView.h */,
+				214A99B017E3D6DA00B85B3E /* SAMGradientView.m */,
 			);
 			path = SAMGradientView;
+			sourceTree = "<group>";
+		};
+		214A99B317E3D6DF00B85B3E /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				214A99B417E3D6DF00B85B3E /* Classes */,
+				214A99B917E3D6DF00B85B3E /* Other Sources */,
+				214A99BC17E3D6DF00B85B3E /* Resources */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		214A99B417E3D6DF00B85B3E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				214A99B517E3D6DF00B85B3E /* SAMAppDelegate.h */,
+				214A99B617E3D6DF00B85B3E /* SAMAppDelegate.m */,
+				214A99B717E3D6DF00B85B3E /* SAMDemoViewController.h */,
+				214A99B817E3D6DF00B85B3E /* SAMDemoViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		214A99B917E3D6DF00B85B3E /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				214A99BA17E3D6DF00B85B3E /* main.m */,
+				214A99BB17E3D6DF00B85B3E /* SAMGradientView-Prefix.pch */,
+			);
+			path = "Other Sources";
+			sourceTree = "<group>";
+		};
+		214A99BC17E3D6DF00B85B3E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				214A99BD17E3D6DF00B85B3E /* Default-568h@2x.png */,
+				214A99BE17E3D6DF00B85B3E /* Default.png */,
+				214A99BF17E3D6DF00B85B3E /* Default@2x.png */,
+				214A99C017E3D6DF00B85B3E /* SAMGradientView-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		214A99C817E3D6E300B85B3E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				214A99C917E3D6E300B85B3E /* SAMGradientViewTests-Info.plist */,
+				214A99CA17E3D6E300B85B3E /* SAMGradientViewTests.m */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		21845E26177E6E4C0002AA46 /* SAMGradientView */ = {
+		214A997B17E3D6C200B85B3E /* SAMGradientView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21845E59177E6E4C0002AA46 /* Build configuration list for PBXNativeTarget "SAMGradientView" */;
+			buildConfigurationList = 214A99A817E3D6C200B85B3E /* Build configuration list for PBXNativeTarget "SAMGradientView" */;
 			buildPhases = (
-				21845E23177E6E4C0002AA46 /* Sources */,
-				21845E24177E6E4C0002AA46 /* Frameworks */,
-				21845E25177E6E4C0002AA46 /* Resources */,
+				214A997817E3D6C200B85B3E /* Sources */,
+				214A997917E3D6C200B85B3E /* Frameworks */,
+				214A997A17E3D6C200B85B3E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -190,68 +188,72 @@
 			);
 			name = SAMGradientView;
 			productName = SAMGradientView;
-			productReference = 21845E27177E6E4C0002AA46 /* SAMGradientView.app */;
+			productReference = 214A997C17E3D6C200B85B3E /* SAMGradientView.app */;
 			productType = "com.apple.product-type.application";
 		};
-		21845E46177E6E4C0002AA46 /* SAMGradientViewTests */ = {
+		214A999617E3D6C200B85B3E /* SAMGradientViewTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21845E5C177E6E4C0002AA46 /* Build configuration list for PBXNativeTarget "SAMGradientViewTests" */;
+			buildConfigurationList = 214A99AB17E3D6C200B85B3E /* Build configuration list for PBXNativeTarget "SAMGradientViewTests" */;
 			buildPhases = (
-				21845E42177E6E4C0002AA46 /* Sources */,
-				21845E43177E6E4C0002AA46 /* Frameworks */,
-				21845E44177E6E4C0002AA46 /* Resources */,
-				21845E45177E6E4C0002AA46 /* ShellScript */,
+				214A999317E3D6C200B85B3E /* Sources */,
+				214A999417E3D6C200B85B3E /* Frameworks */,
+				214A999517E3D6C200B85B3E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				21845E4D177E6E4C0002AA46 /* PBXTargetDependency */,
+				214A999D17E3D6C200B85B3E /* PBXTargetDependency */,
 			);
 			name = SAMGradientViewTests;
 			productName = SAMGradientViewTests;
-			productReference = 21845E47177E6E4C0002AA46 /* SAMGradientViewTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 214A999717E3D6C200B85B3E /* SAMGradientViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		21845E1F177E6E4C0002AA46 /* Project object */ = {
+		214A997417E3D6C200B85B3E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SAM;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Sam Soffes";
+				TargetAttributes = {
+					214A999617E3D6C200B85B3E = {
+						TestTargetID = 214A997B17E3D6C200B85B3E;
+					};
+				};
 			};
-			buildConfigurationList = 21845E22177E6E4C0002AA46 /* Build configuration list for PBXProject "SAMGradientView" */;
+			buildConfigurationList = 214A997717E3D6C200B85B3E /* Build configuration list for PBXProject "SAMGradientView" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 21845E1E177E6E4C0002AA46;
-			productRefGroup = 21845E28177E6E4C0002AA46 /* Products */;
+			mainGroup = 214A997317E3D6C200B85B3E;
+			productRefGroup = 214A997D17E3D6C200B85B3E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				21845E26177E6E4C0002AA46 /* SAMGradientView */,
-				21845E46177E6E4C0002AA46 /* SAMGradientViewTests */,
+				214A997B17E3D6C200B85B3E /* SAMGradientView */,
+				214A999617E3D6C200B85B3E /* SAMGradientViewTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		21845E25177E6E4C0002AA46 /* Resources */ = {
+		214A997A17E3D6C200B85B3E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21845E6C177E6EEC0002AA46 /* Default-568h@2x.png in Resources */,
-				21845E6D177E6EEC0002AA46 /* Default.png in Resources */,
-				21845E6E177E6EEC0002AA46 /* Default@2x.png in Resources */,
+				214A99C617E3D6DF00B85B3E /* Default@2x.png in Resources */,
+				214A99C417E3D6DF00B85B3E /* Default-568h@2x.png in Resources */,
+				214A99C517E3D6DF00B85B3E /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21845E44177E6E4C0002AA46 /* Resources */ = {
+		214A999517E3D6C200B85B3E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -260,64 +262,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		21845E45177E6E4C0002AA46 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		21845E23177E6E4C0002AA46 /* Sources */ = {
+		214A997817E3D6C200B85B3E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21845E6A177E6EEC0002AA46 /* SAMAppDelegate.m in Sources */,
-				21845E6B177E6EEC0002AA46 /* main.m in Sources */,
-				21845E79177E6F0B0002AA46 /* SAMGradientView.m in Sources */,
-				21845E7E177E722D0002AA46 /* SAMDemoViewController.m in Sources */,
+				214A99C217E3D6DF00B85B3E /* SAMDemoViewController.m in Sources */,
+				214A99C117E3D6DF00B85B3E /* SAMAppDelegate.m in Sources */,
+				214A99C317E3D6DF00B85B3E /* main.m in Sources */,
+				214A99B117E3D6DA00B85B3E /* SAMGradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21845E42177E6E4C0002AA46 /* Sources */ = {
+		214A999317E3D6C200B85B3E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21845E7B177E6F630002AA46 /* SAMGradientViewTests.m in Sources */,
+				214A99CC17E3D6E300B85B3E /* SAMGradientViewTests.m in Sources */,
+				214A99B217E3D6DA00B85B3E /* SAMGradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		21845E4D177E6E4C0002AA46 /* PBXTargetDependency */ = {
+		214A999D17E3D6C200B85B3E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 21845E26177E6E4C0002AA46 /* SAMGradientView */;
-			targetProxy = 21845E4C177E6E4C0002AA46 /* PBXContainerItemProxy */;
+			target = 214A997B17E3D6C200B85B3E /* SAMGradientView */;
+			targetProxy = 214A999C17E3D6C200B85B3E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		21845E57177E6E4C0002AA46 /* Debug */ = {
+		214A99A617E3D6C200B85B3E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -329,141 +321,148 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WARNING_CFLAGS = "-Weverything";
 			};
 			name = Debug;
 		};
-		21845E58177E6E4C0002AA46 /* Release */ = {
+		214A99A717E3D6C200B85B3E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				WARNING_CFLAGS = "-Weverything";
 			};
 			name = Release;
 		};
-		21845E5A177E6E4C0002AA46 /* Debug */ = {
+		214A99A917E3D6C200B85B3E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Other Sources/SAMGradientView-Prefix.pch";
-				INFOPLIST_FILE = "Example/Resources/SAMGradientView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Resources/SAMGradientView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		21845E5B177E6E4C0002AA46 /* Release */ = {
+		214A99AA17E3D6C200B85B3E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Other Sources/SAMGradientView-Prefix.pch";
-				INFOPLIST_FILE = "Example/Resources/SAMGradientView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Resources/SAMGradientView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		21845E5D177E6E4C0002AA46 /* Debug */ = {
+		214A99AC17E3D6C200B85B3E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SAMGradientView.app/SAMGradientView";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\\\"$(SDKROOT)/Developer/Library/Frameworks\\\"",
-					"\\\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\\\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/SAMGradientViewTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WARNING_CFLAGS = (
-					"-Weverything",
-					"-Wno-variadic-macros",
-					"-Wno-gnu",
-				);
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
-		21845E5E177E6E4C0002AA46 /* Release */ = {
+		214A99AD17E3D6C200B85B3E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SAMGradientView.app/SAMGradientView";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\\\"$(SDKROOT)/Developer/Library/Frameworks\\\"",
-					"\\\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\\\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				INFOPLIST_FILE = "Tests/SAMGradientViewTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WARNING_CFLAGS = (
-					"-Weverything",
-					"-Wno-variadic-macros",
-					"-Wno-gnu",
-				);
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		21845E22177E6E4C0002AA46 /* Build configuration list for PBXProject "SAMGradientView" */ = {
+		214A997717E3D6C200B85B3E /* Build configuration list for PBXProject "SAMGradientView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				21845E57177E6E4C0002AA46 /* Debug */,
-				21845E58177E6E4C0002AA46 /* Release */,
+				214A99A617E3D6C200B85B3E /* Debug */,
+				214A99A717E3D6C200B85B3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21845E59177E6E4C0002AA46 /* Build configuration list for PBXNativeTarget "SAMGradientView" */ = {
+		214A99A817E3D6C200B85B3E /* Build configuration list for PBXNativeTarget "SAMGradientView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				21845E5A177E6E4C0002AA46 /* Debug */,
-				21845E5B177E6E4C0002AA46 /* Release */,
+				214A99A917E3D6C200B85B3E /* Debug */,
+				214A99AA17E3D6C200B85B3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21845E5C177E6E4C0002AA46 /* Build configuration list for PBXNativeTarget "SAMGradientViewTests" */ = {
+		214A99AB17E3D6C200B85B3E /* Build configuration list for PBXNativeTarget "SAMGradientViewTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				21845E5D177E6E4C0002AA46 /* Debug */,
-				21845E5E177E6E4C0002AA46 /* Release */,
+				214A99AC17E3D6C200B85B3E /* Debug */,
+				214A99AD17E3D6C200B85B3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 21845E1F177E6E4C0002AA46 /* Project object */;
+	rootObject = 214A997417E3D6C200B85B3E /* Project object */;
 }
