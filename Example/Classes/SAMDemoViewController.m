@@ -9,7 +9,7 @@
 #import "SAMDemoViewController.h"
 #import "SAMGradientView.h"
 
-@import Darwin.Availability;
+#import <Availability.h>
 
 @implementation SAMDemoViewController
 

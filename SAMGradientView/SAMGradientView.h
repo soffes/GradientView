@@ -6,9 +6,9 @@
 //  Copyright (c) 2009-2013 Sam Soffes. All rights reserved.
 //
 
-@import Foundation;
-@import UIKit;
-@import Darwin.Availability;
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <Availability.h>
 
 /**
  The mode of the gradient.
