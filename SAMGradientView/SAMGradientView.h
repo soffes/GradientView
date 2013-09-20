@@ -6,20 +6,31 @@
 //  Copyright (c) 2009-2013 Sam Soffes. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import <Availability.h>
+@import Foundation;
+@import UIKit;
+@import Darwin.Availability;
 
 /**
- The direction the gradient.
+ The mode of the gradient.
  */
-typedef enum : NSUInteger {
-    /** The gradient is verticle. */
+typedef NS_ENUM(NSUInteger, SAMGradientViewMode) {
+	/** A linear gradient. */
+	SAMGradientViewModeLinear,
+
+	/** A radial gradient. */
+	SAMGradientViewModeRadial
+};
+
+/**
+ The direction of the gradient.
+ */
+typedef NS_ENUM(NSUInteger, SAMGradientViewDirection) {
+	/** The gradient is verticle. */
 	SAMGradientViewDirectionVertical,
 
 	/** The gradient is horizontal. */
 	SAMGradientViewDirectionHorizontal
-} SAMGradientViewDirection;
+};
 
 
 /**
@@ -42,7 +53,8 @@ typedef enum : NSUInteger {
 #ifdef __IPHONE_7_0
 /**
  An array of `UIColor` objects used to draw the dimmed gradient. If the value is `nil`, `gradientColors` will be
- converted to grayscale.
+ converted to grayscale. This will use the same `gradientLocations` as `gradientColors`. If they don't match, bad things
+ will happen. It is a good idea to make sure the number of dimmed colors equals the number of regular colors.
  
  The default is `nil`.
  */
@@ -60,7 +72,14 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy) NSArray *gradientLocations;
 
 /**
- The direction of the gradient.
+ The mode of the gradient.
+
+ The default is `SAMGradientViewModeLinear`.
+ */
+@property (nonatomic) SAMGradientViewMode gradientMode;
+
+/**
+ The direction of the gradient. Only valid for the `SAMGradientViewModeLinear` mode.
 
  The default is `SAMGradientViewDirectionVertical`.
  */

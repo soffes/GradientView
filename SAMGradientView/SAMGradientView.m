@@ -19,6 +19,7 @@
 @synthesize gradient = _gradient;
 @synthesize gradientColors = _gradientColors;
 @synthesize gradientLocations = _gradientLocations;
+@synthesize gradientMode = _gradientMode;
 @synthesize gradientDirection = _gradientDirection;
 @synthesize useThinBorders = _useThinBorders;
 @synthesize topBorderColor = _topBorderColor;
@@ -172,10 +173,19 @@
 
 	// Gradient
 	if (self.gradient) {
-		CGPoint start = CGPointMake(0.0f, 0.0f);
-		CGPoint end = (self.gradientDirection == SAMGradientViewDirectionVertical ? CGPointMake(0.0f, size.height) :
-					   CGPointMake(size.width, 0.0f));
-		CGContextDrawLinearGradient(context, self.gradient, start, end, kNilOptions);
+		// Linear
+		if (self.gradientMode == SAMGradientViewModeLinear) {
+			CGPoint start = CGPointMake(0.0f, 0.0f);
+			CGPoint end = (self.gradientDirection == SAMGradientViewDirectionVertical ? CGPointMake(0.0f, size.height) :
+						   CGPointMake(size.width, 0.0f));
+			CGContextDrawLinearGradient(context, self.gradient, start, end, kNilOptions);
+		}
+
+		// Radial
+		else {
+			CGPoint center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
+			CGContextDrawRadialGradient(context, self.gradient, center, 0.0f, center, size.width / 2.0f, kCGGradientDrawsAfterEndLocation);
+		}
 	}
 
 	// Top
