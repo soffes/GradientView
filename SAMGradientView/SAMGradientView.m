@@ -70,8 +70,9 @@
 		NSMutableArray *dimmed = [self.gradientColors mutableCopy];
 		[dimmed enumerateObjectsUsingBlock:^(UIColor *color, NSUInteger index, BOOL *stop) {
 			CGFloat hue, saturation, brightness, alpha;
-			[color getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
-			[dimmed replaceObjectAtIndex:index withObject:[UIColor colorWithHue:hue saturation:0.0f brightness:brightness alpha:alpha]];
+			if ([color getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha]) {
+				[dimmed replaceObjectAtIndex:index withObject:[UIColor colorWithHue:hue saturation:0.0f brightness:brightness alpha:alpha]];
+			}
 		}];
 		return dimmed;
 	}
