@@ -3,7 +3,7 @@
 //  SAMGradientView
 //
 //  Created by Sam Soffes on 10/27/09.
-//  Copyright (c) 2009-2013 Sam Soffes. All rights reserved.
+//  Copyright (c) 2009-2014 Sam Soffes. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -55,7 +55,7 @@ typedef NS_ENUM(NSUInteger, SAMGradientViewDirection) {
  An array of `UIColor` objects used to draw the dimmed gradient. If the value is `nil`, `gradientColors` will be
  converted to grayscale. This will use the same `gradientLocations` as `gradientColors`. If they don't match, bad things
  will happen. It is a good idea to make sure the number of dimmed colors equals the number of regular colors.
- 
+
  The default is `nil`.
  */
 

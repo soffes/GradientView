@@ -3,7 +3,7 @@
 //  SAMGradientView
 //
 //  Created by Sam Soffes on 10/27/09.
-//  Copyright (c) 2009-2013 Sam Soffes. All rights reserved.
+//  Copyright (c) 2009-2014 Sam Soffes. All rights reserved.
 //
 
 #import "SAMGradientView.h"
