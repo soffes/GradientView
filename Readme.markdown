@@ -4,11 +4,6 @@ Easily use gradients in UIKit. GradientView is a simple UIView wrapper around CG
 
 GradientView is tested on iOS 7-8 and requires ARC. Released under the [MIT license](LICENSE).
 
-## Example
-
-![Screenshot](http://soff.me/WfBX/iOS%20Simulator%20Screen%20Shot%20Jul%2020,%202014,%209.02.31%20AM.png)
-
-Open up the included Xcode project for an example app and the tests.
 
 ## Usage
 
@@ -34,6 +29,14 @@ view.addSubview(gradientView)
 ```
 
 See the [source](GradientView.swift) for full documentation.
+
+
+## Example
+
+![Screenshot](http://soff.me/WetB/Screenshot.png)
+
+Open up the included Xcode project for an example app.
+
 
 ## Installation
 
