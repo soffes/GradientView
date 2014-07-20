@@ -20,7 +20,8 @@ class ViewController: UIViewController {
 			UIColor(red: 0, green: 0, blue: 0.5, alpha: 1)
 		]
 		
-		gradientView.locations = [0.4, 0.6]
+		// You can configure the locations as well
+//		gradientView.locations = [0.4, 0.6]
 	}
 	
 	@IBAction func showAlert(sender: UIButton) {

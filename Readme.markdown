@@ -6,7 +6,7 @@ GradientView is tested on iOS 7-8 and requires ARC. Released under the [MIT lice
 
 ## Example
 
-![Screenshot](http://soff.me/PzUc/iOS%20Simulator%20Screen%20shot%20Jun%2030,%202013%205.30.40%20PM.png)
+![Screenshot](http://soff.me/WecO/iOS%20Simulator%20Screen%20Shot%20Jul%2020,%202014,%209.01.43%20AM.png)
 
 Open up the included Xcode project for an example app and the tests.
 
