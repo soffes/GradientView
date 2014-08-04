@@ -121,20 +121,6 @@ class GradientView: UIView {
 	}
 	
 	
-	// MARK: - Initializers
-	
-	override init(frame: CGRect) {
-		super.init(frame: frame)
-		initialize()
-	}
-	
-	
-	required init(coder aDecoder: NSCoder!) {
-		super.init(coder: aDecoder)
-		initialize()
-	}
-	
-	
 	// MARK: - UIView
 	
 	override func drawRect(rect: CGRect) {
@@ -194,14 +180,15 @@ class GradientView: UIView {
 		}
 	}
 	
+	override func didMoveToWindow() {
+		super.didMoveToWindow()
+		contentMode = .Redraw
+	}
+	
 	
 	// MARK: - Private
 	
 	var gradient: CGGradientRef?
-	
-	func initialize() {
-		contentMode = .Redraw
-	}
 	
 	func updateGradient() {
 		gradient = nil
