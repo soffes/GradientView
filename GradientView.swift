@@ -123,13 +123,13 @@ class GradientView: UIView {
 	
 	// MARK: - Initializers
 	
-	init(frame: CGRect) {
+	override init(frame: CGRect) {
 		super.init(frame: frame)
 		initialize()
 	}
 	
 	
-	init(coder aDecoder: NSCoder!) {
+	required init(coder aDecoder: NSCoder!) {
 		super.init(coder: aDecoder)
 		initialize()
 	}
@@ -155,7 +155,7 @@ class GradientView: UIView {
 			}
 		}
 		
-		let screen = window?.screen ? window.screen : UIScreen.mainScreen()
+		let screen = window?.screen ?? UIScreen.mainScreen()
 		let borderWidth: CGFloat = drawsThinBorders ? 1.0 / screen.scale : 1.0
 		
 		// Top border
@@ -164,8 +164,8 @@ class GradientView: UIView {
 			CGContextFillRect(context, CGRect(x: 0, y: 0, width: size.width, height: borderWidth))
 		}
 		
-		let sideY: CGFloat = topBorderColor ? borderWidth : 0
-		let sideHeight: CGFloat = size.height - sideY - (bottomBorderColor ? borderWidth : 0)
+		let sideY: CGFloat = topBorderColor != nil ? borderWidth : 0
+		let sideHeight: CGFloat = size.height - sideY - (bottomBorderColor != nil ? borderWidth : 0)
 		
 		// Right border
 		if let color = rightBorderColor {

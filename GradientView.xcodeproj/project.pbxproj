@@ -10,7 +10,6 @@
 		21E5C1B4197AD7F100499002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E5C1AE197AD7F100499002 /* AppDelegate.swift */; };
 		21E5C1B5197AD7F100499002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E5C1AF197AD7F100499002 /* Main.storyboard */; };
 		21E5C1B6197AD7F100499002 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21E5C1B1197AD7F100499002 /* Images.xcassets */; };
-		21E5C1B7197AD7F100499002 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21E5C1B2197AD7F100499002 /* Info.plist */; };
 		21E5C1B8197AD7F100499002 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E5C1B3197AD7F100499002 /* ViewController.swift */; };
 		21E5C1BF197AD7FA00499002 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E5C1BE197AD7FA00499002 /* GradientView.swift */; };
 /* End PBXBuildFile section */
@@ -124,7 +123,6 @@
 			files = (
 				21E5C1B5197AD7F100499002 /* Main.storyboard in Resources */,
 				21E5C1B6197AD7F100499002 /* Images.xcassets in Resources */,
-				21E5C1B7197AD7F100499002 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
