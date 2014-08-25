@@ -141,7 +141,7 @@ class GradientView: UIView {
 			}
 		}
 		
-		let screen = window?.screen ?? UIScreen.mainScreen()
+		let screen: UIScreen = window?.screen ?? UIScreen.mainScreen()
 		let borderWidth: CGFloat = drawsThinBorders ? 1.0 / screen.scale : 1.0
 		
 		// Top border

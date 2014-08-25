@@ -43,6 +43,7 @@
 				21E5C18C197AD72A00499002 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		21E5C18C197AD72A00499002 /* Products */ = {
 			isa = PBXGroup;
