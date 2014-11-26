@@ -1,8 +1,8 @@
-# GradientView
+# Gradient View
 
-Easily use gradients in UIKit. GradientView is a simple UIView wrapper around CGGradient.
+Easily use gradients in UIKit. Gradient View is a simple UIView wrapper around CGGradient.
 
-GradientView is tested on iOS 7-8 and requires ARC. Released under the [MIT license](LICENSE).
+Gradient View is tested on iOS 8. Released under the [MIT license](LICENSE).
 
 
 ## Usage
@@ -40,4 +40,4 @@ Open up the included Xcode project for an example app.
 
 ## Installation
 
-Simply add the files in the `GradientView.swift` to your project.
+Simply add the files in the <GradientView/GradientView.swift> to your project. Gradient View also supports installation with [Carthage](https://github.com/Carthage/Carthage).
