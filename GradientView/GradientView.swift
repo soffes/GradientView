@@ -196,11 +196,25 @@ public class GradientView: UIView {
 
 		let colors = gradientColors()
 		if let colors = colors {
-			let colorSpace = CGColorGetColorSpace(colors[0].CGColor)
+			let colorSpace = CGColorSpaceCreateDeviceRGB()
+			let colorSpaceModel = CGColorSpaceGetModel(colorSpace)
 
-			// TODO: This is ugly. Surely there is a way to make this more concise.
 			let gradientColors: NSArray = colors.map { (color: UIColor) -> AnyObject! in
-				return color.CGColor as AnyObject!
+				let cgColor = color.CGColor
+				let cgColorSpace = CGColorGetColorSpace(cgColor)
+
+				// The color's color space is RGB, simply add it.
+				if CGColorSpaceGetModel(cgColorSpace).value == colorSpaceModel.value {
+					return cgColor as AnyObject!
+				}
+
+				// Convert to RGB. There may be a more efficient way to do this.
+				var red: CGFloat = 0
+				var blue: CGFloat = 0
+				var green: CGFloat = 0
+				var alpha: CGFloat = 0
+				color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+				return UIColor(red: red, green: green, blue: blue, alpha: alpha).CGColor as AnyObject!
 			}
 
 			// TODO: This is ugly. Surely there is a way to make this more concise.

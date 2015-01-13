@@ -17,7 +17,8 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		
 		gradientView.colors = [
-			UIColor(red: 0, green: 0, blue: 1, alpha: 1),
+//			UIColor(red: 0, green: 0, blue: 1, alpha: 1),
+			UIColor.whiteColor(),
 			UIColor(red: 0, green: 0, blue: 0.5, alpha: 1)
 		]
 		
