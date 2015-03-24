@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
 
 "
   s.homepage    = "https://github.com/soffes/GradientView"
-  s.license     = { :type => "MIT" }
+  s.license     = { :type => "MIT", :file => "LICENSE" }
   s.authors     = { "Sam Soffes" => "sam@soff.es" }
 
   s.requires_arc = true
