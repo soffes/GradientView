@@ -4,7 +4,7 @@ Easily use gradients in UIKit. Gradient View is a simple UIView wrapper around C
 
 Gradient View is tested on iOS 8. Released under the [MIT license](LICENSE).
 
-[![GitHub release](https://img.shields.io/github/release/soffes/GradientView.svg)](https://github.com/soffes/GradientView/releases) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
+[![Version](https://img.shields.io/github/release/soffes/GradientView.svg)](https://github.com/soffes/GradientView/releases) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![CocoaPods compatible](https://img.shields.io/cocoapods/v/GradientView.svg)](https://cocoapods.org/pods/GradientView)
 
 ## Usage
 
