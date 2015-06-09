@@ -41,4 +41,4 @@ Open up the included Xcode project for an example app.
 
 ## Installation
 
-Simply add the files in the <GradientView/GradientView.swift> to your project. Gradient View also supports installation with [Carthage](https://github.com/Carthage/Carthage).
+Simply add the files in the <GradientView/GradientView.swift> to your project. Gradient View also supports installation with [Carthage](https://github.com/Carthage/Carthage) and [CocoaPods](https://cocoapods.org/pods/GradientView).
