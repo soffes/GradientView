@@ -16,6 +16,11 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+        gradientView.mode = .Radial
+//        gradientView.radialStartAnchor = CGPoint(x: 0.25, y: 0.75)
+//        gradientView.radialStartRadius = 0.1
+//        gradientView.radialEndRadius = 0.8
+//        gradientView.radialEndAnchor = CGPoint(x: 0.75, y: 0.25)
 		gradientView.colors = [
 //			UIColor(red: 0, green: 0, blue: 1, alpha: 1),
 			UIColor.whiteColor(),
