@@ -32,6 +32,18 @@ public class GradientView: UIView {
 		case Horizontal
 	}
 
+    // Structure that conveys the attributes of a radial gradient at its start or end points
+    public struct RadialGradientAttributes {
+        /// The relative positioning of the center point along the view's respective axes
+        public let origin: CGPoint?
+        /// The size of the gradient relative to the view's bounds
+        public let radius: CGFloat?
+        
+        public init(origin: CGPoint?, radius: CGFloat?) {
+            self.origin = origin
+            self.radius = radius
+        }
+    }
 
 	// MARK: - Properties
 
@@ -85,43 +97,23 @@ public class GradientView: UIView {
 		}
 	}
     
-    /// The location of the start of the radial gradient center. Only valid for the `Mode.Radial` mode.
-    /// 
-    /// The point is similar to `anchorPoint` in that the x & y values define
-    /// the relative positioning of the center point along the view's axis
+    /// The attibutes of the gradient at its start (inner). Only valid for the `Mode.Radial` mode.
     ///
-    /// Defaults to `CGPoint(x: 0.5, y: 0.5)` AKA view.center
-    public var radialStartAnchor: CGPoint = CGPoint(x: 0.5, y: 0.5) {
+    /// `origin` define the relative positioning of the start center point along the view's respective axes
+    /// `radius` determines the size of the gradient relative to the view's bounds
+    public var radialGradientStartAttributes: RadialGradientAttributes = RadialGradientAttributes(origin: CGPoint(x: 0.5, y: 0.5), radius: 0.0) {
         didSet {
             setNeedsDisplay()
         }
     }
     
-    /// The size of the starting color's radius as a percentage of the view's shortest edge.
-    /// Only valid for the `Mode.Radial` mode. Defaults to `0.0`
-    public var radialStartRadius: CGFloat = 0.0 {
-        didSet {
-            setNeedsDisplay()
-        }
-    }
-    
-    /// The location of the end of the radial gradient center. Only valid for the `Mode.Radial` mode.
+    /// The attibutes of the gradient at its end (outer). Only valid for the `Mode.Radial` mode.
     ///
-    /// The point is similar to `anchorPoint` in that the x & y values define
-    /// the relative positioning of the center point along the view's axis
+    /// `origin` define the relative positioning of the end center point along the view's respective axes
+    /// `radius` determines the size of the gradient relative to the view's bounds
     ///
-    /// If left unset, the radialStartAnchor will be used to keep the gradient circular by default
-    ///
-    /// Defaults to `nil`
-    public var radialEndAnchor: CGPoint? {
-        didSet {
-            setNeedsDisplay()
-        }
-    }
-    
-    /// The size of the end color's radius as a percentage of the view's shortest edge.
-    /// Only valid for the `Mode.Radial` mode. Defaults to `0.0`
-    public var radialEndRadius: CGFloat? {
+    /// Default behavior depends on `radialGradentStartAttributes` but can be overridden for more complex radial gradients
+    public var radialGradientEndAttributes: RadialGradientAttributes? {
         didSet {
             setNeedsDisplay()
         }
@@ -169,7 +161,7 @@ public class GradientView: UIView {
 		let context = UIGraphicsGetCurrentContext()
 		let size = bounds.size
 
-		// Gradient
+        // Gradient
 		if let gradient = gradient {
 			let options = CGGradientDrawingOptions(kCGGradientDrawsAfterEndLocation)
 			if mode == .Linear {
@@ -177,17 +169,22 @@ public class GradientView: UIView {
 				let endPoint = direction == .Vertical ? CGPoint(x: 0, y: size.height) : CGPoint(x: size.width, y: 0)
 				CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, options)
 			} else {
-                let startCenter = CGPoint(x: bounds.width * radialStartAnchor.x, y: bounds.height * radialStartAnchor.y)
-                let startRadius: CGFloat = radialStartRadius * min(bounds.width, bounds.height) / 2
+                let startOrigin = radialGradientStartAttributes.origin ?? CGPoint(x: 0.5, y: 0.5)
+                let startRadiusRatio = radialGradientStartAttributes.radius ?? 0.0
+
+                let startCenter = CGPoint(x: bounds.width * startOrigin.x, y: bounds.height * startOrigin.y)
+                let startRadius: CGFloat = startRadiusRatio * min(bounds.width, bounds.height) / 2
+
                 var endCenter = startCenter // set this to be the same as the start by default
                 var endRadius = min(size.width, size.height) / 2
 
-                if let radialEndAnchor = radialEndAnchor {
-                    endCenter = CGPoint(x: bounds.width * radialEndAnchor.x, y: bounds.height * radialEndAnchor.y)
-                }
-                
-                if let radialEndRadius = radialEndRadius {
-                    endRadius = radialEndRadius * min(bounds.width, bounds.height)
+                if let radialEndAttributes = radialGradientEndAttributes {
+                    if let endOrigin = radialEndAttributes.origin {
+                        endCenter = CGPoint(x: bounds.width * endOrigin.x, y: bounds.height * endOrigin.y)
+                    }
+                    if let endRadiusRatio = radialEndAttributes.radius {
+                        endRadius = endRadiusRatio * min(bounds.width, bounds.height) / 2
+                    }
                 }
                 
                 CGContextDrawRadialGradient(context, gradient, startCenter, startRadius, endCenter, endRadius, options)
