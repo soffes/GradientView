@@ -129,7 +129,7 @@ public class GradientView: UIView {
 
 		// Gradient
 		if let gradient = gradient {
-			let options = CGGradientDrawingOptions(kCGGradientDrawsAfterEndLocation)
+			let options = CGGradientDrawingOptions.DrawsAfterEndLocation
 
 			if mode == .Linear {
 				let startPoint = CGPointZero
@@ -204,7 +204,7 @@ public class GradientView: UIView {
 				let cgColorSpace = CGColorGetColorSpace(cgColor)
 
 				// The color's color space is RGB, simply add it.
-				if CGColorSpaceGetModel(cgColorSpace).value == colorSpaceModel.value {
+				if CGColorSpaceGetModel(cgColorSpace).rawValue == colorSpaceModel.rawValue {
 					return cgColor as AnyObject!
 				}
 
