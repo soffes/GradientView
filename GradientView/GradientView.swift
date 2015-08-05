@@ -129,7 +129,7 @@ public class GradientView: UIView {
 
 		// Gradient
 		if let gradient = gradient {
-			let options = CGGradientDrawingOptions.DrawsAfterEndLocation
+            let options: CGGradientDrawingOptions = [.DrawsAfterEndLocation]
 
 			if mode == .Linear {
 				let startPoint = CGPointZero
