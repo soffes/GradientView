@@ -189,6 +189,7 @@
 		2163B9EE1A25FBF000610B0C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Sam Soffes";
 				TargetAttributes = {
@@ -389,6 +390,7 @@
 		2163BA3A1A25FBFD00610B0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 8;
 				DEFINES_MODULE = YES;
@@ -416,6 +418,7 @@
 		2163BA3B1A25FBFD00610B0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 8;
 				DEFINES_MODULE = YES;
