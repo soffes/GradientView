@@ -14,7 +14,7 @@ public class GradientView: UIView {
 	// MARK: - Types
 
 	/// The mode of the gradient.
-	public enum Type {
+    @objc public enum Type:Int {
 		/// A linear gradient.
 		case Linear
 
@@ -24,7 +24,7 @@ public class GradientView: UIView {
 
 
 	/// The direction of the gradient.
-	public enum Direction {
+    @objc public enum Direction:Int {
 		/// The gradient is vertical.
 		case Vertical
 
