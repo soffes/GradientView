@@ -244,11 +244,11 @@ public class GradientView: UIView {
 
 //Objc Support
 public extension GradientView {
-    func setLinearGradient(startingPoint: CGPoint, endPoint: CGPoint) {
+    func setLinearGradient(from startingPoint: CGPoint, to endPoint: CGPoint) {
         self.mode = .Linear(startingPoint, endPoint)
     }
     
-    func setRadialGradient(centerPoint: CGPoint, radius: CGFloat) {
+    func setRadialGradient(from centerPoint: CGPoint, withRadius radius: CGFloat) {
         self.mode = .Radial(centerPoint, radius)
     }
     
