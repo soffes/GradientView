@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 			UIColor.whiteColor(),
 			UIColor(red: 0, green: 0, blue: 0.5, alpha: 1)
 		]
-		
+		gradientView.mode = .Radial(CGPointMake(0.5, 0.5), 200)
 		// You can configure the locations as well
 //		gradientView.locations = [0.4, 0.6]
 	}
