@@ -240,3 +240,18 @@ public class GradientView: UIView {
 		return colors
 	}
 }
+
+
+//Objc Support
+public extension GradientView {
+    func setLinearGradient(startingPoint: CGPoint, endPoint: CGPoint) {
+        self.mode = .Linear(startingPoint, endPoint)
+    }
+    
+    func setRadialGradient(centerPoint: CGPoint, radius: CGFloat) {
+        self.mode = .Radial(centerPoint, radius)
+    }
+    
+    
+
+}
