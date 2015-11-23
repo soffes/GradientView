@@ -8,30 +8,29 @@
 
 import UIKit
 
+func *(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
+    return CGPointMake(lhs.x * rhs.x, lhs.y * rhs.y)
+}
+
+func *(lhs: CGPoint, rhs: CGSize) -> CGPoint {
+    return CGPointMake(lhs.x * rhs.width, lhs.y * rhs.height)
+}
+
 /// Simple view for drawing gradients and borders.
 public class GradientView: UIView {
 
 	// MARK: - Types
 
 	/// The mode of the gradient.
-	public enum Type {
+    public enum Type {
 		/// A linear gradient.
-		case Linear
+        /// StartPoint [0,1], EndPoint [0,1]
+		case Linear(CGPoint, CGPoint)
 
-		/// A radial gradient.
-		case Radial
+		/// A radial gradient. 
+        /// Center [0,1], Radius
+		case Radial(CGPoint, CGFloat)
 	}
-
-
-	/// The direction of the gradient.
-	public enum Direction {
-		/// The gradient is vertical.
-		case Vertical
-
-		/// The gradient is horizontal
-		case Horizontal
-	}
-
 
 	// MARK: - Properties
 
@@ -72,14 +71,7 @@ public class GradientView: UIView {
 	}
 
 	/// The mode of the gradient. The default is `.Linear`.
-	public var mode: Type = .Linear {
-		didSet {
-			setNeedsDisplay()
-		}
-	}
-
-	/// The direction of the gradient. Only valid for the `Mode.Linear` mode. The default is `.Vertical`.
-	public var direction: Direction = .Vertical {
+	public var mode: Type = .Linear(CGPointZero, CGPointMake(1, 1)) {
 		didSet {
 			setNeedsDisplay()
 		}
@@ -131,14 +123,12 @@ public class GradientView: UIView {
 		if let gradient = gradient {
             let options: CGGradientDrawingOptions = [.DrawsAfterEndLocation]
 
-			if mode == .Linear {
-				let startPoint = CGPointZero
-				let endPoint = direction == .Vertical ? CGPoint(x: 0, y: size.height) : CGPoint(x: size.width, y: 0)
-				CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, options)
-			} else {
-				let center = CGPoint(x: bounds.midX, y: bounds.midY)
-				CGContextDrawRadialGradient(context, gradient, center, 0, center, min(size.width, size.height) / 2, options)
-			}
+            switch (mode) {
+                case let .Linear(startPoint, endPoint):
+                    CGContextDrawLinearGradient(context, gradient, startPoint * rect.size, endPoint * rect.size, options)
+                case let .Radial(center, radius):
+                    CGContextDrawRadialGradient(context, gradient, center * rect.size, 0, center * rect.size, radius, options)
+            }
 		}
 
 		let screen: UIScreen = window?.screen ?? UIScreen.mainScreen()
@@ -249,4 +239,19 @@ public class GradientView: UIView {
 
 		return colors
 	}
+}
+
+
+//Objc Support
+public extension GradientView {
+    func setLinearGradient(from startingPoint: CGPoint, to endPoint: CGPoint) {
+        self.mode = .Linear(startingPoint, endPoint)
+    }
+    
+    func setRadialGradient(from centerPoint: CGPoint, withRadius radius: CGFloat) {
+        self.mode = .Radial(centerPoint, radius)
+    }
+    
+    
+
 }
