@@ -15,7 +15,7 @@ public class GradientView: UIView {
 	// MARK: - Types
 
 	/// The mode of the gradient.
-  public enum Type {
+	public enum Type {
 		/// A linear gradient.
 		case Linear
 
@@ -57,7 +57,7 @@ public class GradientView: UIView {
 
 	/// Automatically dim gradient colors when prompted by the system (i.e. when an alert is shown).
 	///
-  /// The default is `true`.
+	/// The default is `true`.
 	public var automaticallyDims: Bool = true
 
 	/// An optional array of `CGFloat`s defining the location of each gradient stop.
@@ -72,56 +72,56 @@ public class GradientView: UIView {
 		}
 	}
 
-  /// The mode of the gradient. The default is `.Linear`.
-  @IBInspectable
+	/// The mode of the gradient. The default is `.Linear`.
+	@IBInspectable
 	public var mode: Type = .Linear {
 		didSet {
 			setNeedsDisplay()
 		}
 	}
 
-  /// The direction of the gradient. Only valid for the `Mode.Linear` mode. The default is `.Vertical`.
-  @IBInspectable
+	/// The direction of the gradient. Only valid for the `Mode.Linear` mode. The default is `.Vertical`.
+	@IBInspectable
 	public var direction: Direction = .Vertical {
 		didSet {
 			setNeedsDisplay()
 		}
 	}
 
-  /// 1px borders will be drawn instead of 1pt borders. The default is `true`.
-  @IBInspectable
+	/// 1px borders will be drawn instead of 1pt borders. The default is `true`.
+	@IBInspectable
 	public var drawsThinBorders: Bool = true {
 		didSet {
 			setNeedsDisplay()
 		}
 	}
 
-  /// The top border color. The default is `nil`.
-  @IBInspectable
+	/// The top border color. The default is `nil`.
+	@IBInspectable
 	public var topBorderColor: UIColor? {
 		didSet {
 			setNeedsDisplay()
 		}
 	}
 
-  /// The right border color. The default is `nil`.
-  @IBInspectable
+	/// The right border color. The default is `nil`.
+	@IBInspectable
 	public var rightBorderColor: UIColor? {
 		didSet {
 			setNeedsDisplay()
 		}
 	}
 
-  ///  The bottom border color. The default is `nil`.
-  @IBInspectable
+	///  The bottom border color. The default is `nil`.
+	@IBInspectable
 	public var bottomBorderColor: UIColor? {
 		didSet {
 			setNeedsDisplay()
 		}
 	}
 
-  /// The left border color. The default is `nil`.
-  @IBInspectable
+	/// The left border color. The default is `nil`.
+	@IBInspectable
 	public var leftBorderColor: UIColor? {
 		didSet {
 			setNeedsDisplay()
@@ -137,7 +137,7 @@ public class GradientView: UIView {
 
 		// Gradient
 		if let gradient = gradient {
-            let options: CGGradientDrawingOptions = [.DrawsAfterEndLocation]
+	          let options: CGGradientDrawingOptions = [.DrawsAfterEndLocation]
 
 			if mode == .Linear {
 				let startPoint = CGPointZero
