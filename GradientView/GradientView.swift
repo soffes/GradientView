@@ -9,6 +9,7 @@
 import UIKit
 
 /// Simple view for drawing gradients and borders.
+@IBDesignable
 public class GradientView: UIView {
 
 	// MARK: - Types
@@ -72,6 +73,7 @@ public class GradientView: UIView {
 	}
 
 	/// The mode of the gradient. The default is `.Linear`.
+	@IBInspectable
 	public var mode: Type = .Linear {
 		didSet {
 			setNeedsDisplay()
@@ -79,6 +81,7 @@ public class GradientView: UIView {
 	}
 
 	/// The direction of the gradient. Only valid for the `Mode.Linear` mode. The default is `.Vertical`.
+	@IBInspectable
 	public var direction: Direction = .Vertical {
 		didSet {
 			setNeedsDisplay()
@@ -86,6 +89,7 @@ public class GradientView: UIView {
 	}
 
 	/// 1px borders will be drawn instead of 1pt borders. The default is `true`.
+	@IBInspectable
 	public var drawsThinBorders: Bool = true {
 		didSet {
 			setNeedsDisplay()
@@ -93,6 +97,7 @@ public class GradientView: UIView {
 	}
 
 	/// The top border color. The default is `nil`.
+	@IBInspectable
 	public var topBorderColor: UIColor? {
 		didSet {
 			setNeedsDisplay()
@@ -100,6 +105,7 @@ public class GradientView: UIView {
 	}
 
 	/// The right border color. The default is `nil`.
+	@IBInspectable
 	public var rightBorderColor: UIColor? {
 		didSet {
 			setNeedsDisplay()
@@ -107,6 +113,7 @@ public class GradientView: UIView {
 	}
 
 	///  The bottom border color. The default is `nil`.
+	@IBInspectable
 	public var bottomBorderColor: UIColor? {
 		didSet {
 			setNeedsDisplay()
@@ -114,6 +121,7 @@ public class GradientView: UIView {
 	}
 
 	/// The left border color. The default is `nil`.
+	@IBInspectable
 	public var leftBorderColor: UIColor? {
 		didSet {
 			setNeedsDisplay()
@@ -129,7 +137,7 @@ public class GradientView: UIView {
 
 		// Gradient
 		if let gradient = gradient {
-            let options: CGGradientDrawingOptions = [.DrawsAfterEndLocation]
+			let options: CGGradientDrawingOptions = [.DrawsAfterEndLocation]
 
 			if mode == .Linear {
 				let startPoint = CGPointZero
