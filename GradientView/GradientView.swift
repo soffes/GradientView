@@ -154,7 +154,7 @@ public class GradientView: UIView {
 
 		// Top border
 		if let color = topBorderColor {
-			CGContextSetFillColorWithColor(context, color.CGColor);
+			CGContextSetFillColorWithColor(context, color.CGColor)
 			CGContextFillRect(context, CGRect(x: 0, y: 0, width: size.width, height: borderWidth))
 		}
 
@@ -163,19 +163,19 @@ public class GradientView: UIView {
 
 		// Right border
 		if let color = rightBorderColor {
-			CGContextSetFillColorWithColor(context, color.CGColor);
+			CGContextSetFillColorWithColor(context, color.CGColor)
 			CGContextFillRect(context, CGRect(x: size.width - borderWidth, y: sideY, width: borderWidth, height: sideHeight))
 		}
 
 		// Bottom border
 		if let color = bottomBorderColor {
-			CGContextSetFillColorWithColor(context, color.CGColor);
+			CGContextSetFillColorWithColor(context, color.CGColor)
 			CGContextFillRect(context, CGRect(x: 0, y: size.height - borderWidth, width: size.width, height: borderWidth))
 		}
 
 		// Left border
 		if let color = leftBorderColor {
-			CGContextSetFillColorWithColor(context, color.CGColor);
+			CGContextSetFillColorWithColor(context, color.CGColor)
 			CGContextFillRect(context, CGRect(x: 0, y: sideY, width: borderWidth, height: sideHeight))
 		}
 	}
