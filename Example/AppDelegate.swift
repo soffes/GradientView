@@ -8,7 +8,6 @@
 
 import UIKit
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-	@IBOutlet var window: UIWindow!
+@UIApplicationMain final class AppDelegate: UIResponder, UIApplicationDelegate {
+	@IBOutlet var window: UIWindow?
 }
