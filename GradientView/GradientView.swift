@@ -60,13 +60,13 @@ public class GradientView: UIView {
 	/// The default is `true`.
 	public var automaticallyDims: Bool = true
 
-	/// An optional array of `CGFloat`s defining the location of each gradient stop.
+	/// An array of `CGFloat`s defining the location of each gradient stop.
 	///
 	/// The gradient stops are specified as values between `0` and `1`. The values must be monotonically increasing. If
-	/// `nil`, the stops are spread uniformly across the range.
+	/// empty, the stops are spread uniformly across the range.
 	///
-	/// Defaults to `nil`.
-	public var locations: [CGFloat]? {
+	/// Defaults to epmty.
+	public var locations: [CGFloat] = [] {
 		didSet {
 			updateGradient()
 		}
@@ -224,13 +224,8 @@ public class GradientView: UIView {
 				color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 				return UIColor(red: red, green: green, blue: blue, alpha: alpha).CGColor as AnyObject!
 			}
-
-			// TODO: This is ugly. Surely there is a way to make this more concise.
-			if let locations = locations {
-				gradient = CGGradientCreateWithColors(colorSpace, gradientColors, locations)
-			} else {
-				gradient = CGGradientCreateWithColors(colorSpace, gradientColors, nil)
-			}
+      
+      gradient = CGGradientCreateWithColors(colorSpace, gradientColors, locations)
 		}
 	}
 
