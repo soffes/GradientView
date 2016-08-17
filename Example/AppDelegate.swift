@@ -9,5 +9,15 @@
 import UIKit
 
 @UIApplicationMain final class AppDelegate: UIResponder, UIApplicationDelegate {
-	@IBOutlet var window: UIWindow?
+
+	var window: UIWindow? = {
+		let window = UIWindow()
+		window.rootViewController = UINavigationController(rootViewController: ViewController())
+		return window
+	}()
+
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+		window?.makeKeyAndVisible()
+		return true
+	}
 }
