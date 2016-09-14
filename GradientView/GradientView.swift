@@ -132,7 +132,10 @@ public class GradientView: UIView {
 	// MARK: - UIView
 
 	override public func drawRect(rect: CGRect) {
-		let context = UIGraphicsGetCurrentContext()
+		guard let context = UIGraphicsGetCurrentContext() else {
+			return
+		}
+
 		let size = bounds.size
 
 		// Gradient
@@ -209,10 +212,9 @@ public class GradientView: UIView {
 
 			let gradientColors: NSArray = colors.map { (color: UIColor) -> AnyObject! in
 				let cgColor = color.CGColor
-				let cgColorSpace = CGColorGetColorSpace(cgColor)
 
 				// The color's color space is RGB, simply add it.
-				if CGColorSpaceGetModel(cgColorSpace).rawValue == colorSpaceModel.rawValue {
+				if let cgColorSpace = CGColorGetColorSpace(cgColor) where CGColorSpaceGetModel(cgColorSpace).rawValue == colorSpaceModel.rawValue {
 					return cgColor as AnyObject!
 				}
 
