@@ -217,12 +217,8 @@ import UIKit
 				return UIColor(red: red, green: green, blue: blue, alpha: alpha).cgColor as AnyObject!
 			} as NSArray
 
-			// TODO: This is ugly. Surely there is a way to make this more concise.
-			if let locations = locations {
-				gradient = CGGradient(colorsSpace: colorSpace, colors: gradientColors, locations: locations)
-			} else {
-				gradient = CGGradient(colorsSpace: colorSpace, colors: gradientColors, locations: nil)
-			}
+			gradient = CGGradient(colorsSpace: colorSpace, colors: gradientColors, locations: locations ?? nil)
+            
 		}
 	}
 
