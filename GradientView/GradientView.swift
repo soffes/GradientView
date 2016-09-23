@@ -10,27 +10,27 @@ import UIKit
 
 /// Simple view for drawing gradients and borders.
 @IBDesignable
-public class GradientView: UIView {
+open class GradientView: UIView {
 
 	// MARK: - Types
 
 	/// The mode of the gradient.
-	public enum Type {
+	public enum `Type` {
 		/// A linear gradient.
-		case Linear
+		case linear
 
 		/// A radial gradient.
-		case Radial
+		case radial
 	}
 
 
 	/// The direction of the gradient.
 	public enum Direction {
 		/// The gradient is vertical.
-		case Vertical
+		case vertical
 
 		/// The gradient is horizontal
-		case Horizontal
+		case horizontal
 	}
 
 
@@ -38,7 +38,7 @@ public class GradientView: UIView {
 
 	/// An optional array of `UIColor` objects used to draw the gradient. If the value is `nil`, the `backgroundColor`
 	/// will be drawn instead of a gradient. The default is `nil`.
-	public var colors: [UIColor]? {
+	open var colors: [UIColor]? {
 		didSet {
 			updateGradient()
 		}
@@ -49,7 +49,7 @@ public class GradientView: UIView {
 	/// things will happen. You must make sure the number of dimmed colors equals the number of regular colors.
 	///
 	/// The default is `nil`.
-	public var dimmedColors: [UIColor]? {
+	open var dimmedColors: [UIColor]? {
 		didSet {
 			updateGradient()
 		}
@@ -58,7 +58,7 @@ public class GradientView: UIView {
 	/// Automatically dim gradient colors when prompted by the system (i.e. when an alert is shown).
 	///
 	/// The default is `true`.
-	public var automaticallyDims: Bool = true
+	open var automaticallyDims: Bool = true
 
 	/// An optional array of `CGFloat`s defining the location of each gradient stop.
 	///
@@ -66,7 +66,7 @@ public class GradientView: UIView {
 	/// `nil`, the stops are spread uniformly across the range.
 	///
 	/// Defaults to `nil`.
-	public var locations: [CGFloat]? {
+	open var locations: [CGFloat]? {
 		didSet {
 			updateGradient()
 		}
@@ -74,7 +74,7 @@ public class GradientView: UIView {
 
 	/// The mode of the gradient. The default is `.Linear`.
 	@IBInspectable
-	public var mode: Type = .Linear {
+	open var mode: Type = .linear {
 		didSet {
 			setNeedsDisplay()
 		}
@@ -82,7 +82,7 @@ public class GradientView: UIView {
 
 	/// The direction of the gradient. Only valid for the `Mode.Linear` mode. The default is `.Vertical`.
 	@IBInspectable
-	public var direction: Direction = .Vertical {
+	open var direction: Direction = .vertical {
 		didSet {
 			setNeedsDisplay()
 		}
@@ -90,7 +90,7 @@ public class GradientView: UIView {
 
 	/// 1px borders will be drawn instead of 1pt borders. The default is `true`.
 	@IBInspectable
-	public var drawsThinBorders: Bool = true {
+	open var drawsThinBorders: Bool = true {
 		didSet {
 			setNeedsDisplay()
 		}
@@ -98,7 +98,7 @@ public class GradientView: UIView {
 
 	/// The top border color. The default is `nil`.
 	@IBInspectable
-	public var topBorderColor: UIColor? {
+	open var topBorderColor: UIColor? {
 		didSet {
 			setNeedsDisplay()
 		}
@@ -106,7 +106,7 @@ public class GradientView: UIView {
 
 	/// The right border color. The default is `nil`.
 	@IBInspectable
-	public var rightBorderColor: UIColor? {
+	open var rightBorderColor: UIColor? {
 		didSet {
 			setNeedsDisplay()
 		}
@@ -114,7 +114,7 @@ public class GradientView: UIView {
 
 	///  The bottom border color. The default is `nil`.
 	@IBInspectable
-	public var bottomBorderColor: UIColor? {
+	open var bottomBorderColor: UIColor? {
 		didSet {
 			setNeedsDisplay()
 		}
@@ -122,7 +122,7 @@ public class GradientView: UIView {
 
 	/// The left border color. The default is `nil`.
 	@IBInspectable
-	public var leftBorderColor: UIColor? {
+	open var leftBorderColor: UIColor? {
 		didSet {
 			setNeedsDisplay()
 		}
@@ -131,31 +131,31 @@ public class GradientView: UIView {
 
 	// MARK: - UIView
 
-	override public func drawRect(rect: CGRect) {
+	override open func draw(_ rect: CGRect) {
 		let context = UIGraphicsGetCurrentContext()
 		let size = bounds.size
 
 		// Gradient
 		if let gradient = gradient {
-			let options: CGGradientDrawingOptions = [.DrawsAfterEndLocation]
+			let options: CGGradientDrawingOptions = [.drawsAfterEndLocation]
 
-			if mode == .Linear {
-				let startPoint = CGPointZero
-				let endPoint = direction == .Vertical ? CGPoint(x: 0, y: size.height) : CGPoint(x: size.width, y: 0)
-				CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, options)
+			if mode == .linear {
+				let startPoint = CGPoint.zero
+				let endPoint = direction == .vertical ? CGPoint(x: 0, y: size.height) : CGPoint(x: size.width, y: 0)
+				context?.drawLinearGradient(gradient, start: startPoint, end: endPoint, options: options)
 			} else {
 				let center = CGPoint(x: bounds.midX, y: bounds.midY)
-				CGContextDrawRadialGradient(context, gradient, center, 0, center, min(size.width, size.height) / 2, options)
+				context?.drawRadialGradient(gradient, startCenter: center, startRadius: 0, endCenter: center, endRadius: min(size.width, size.height) / 2, options: options)
 			}
 		}
 
-		let screen: UIScreen = window?.screen ?? UIScreen.mainScreen()
+		let screen: UIScreen = window?.screen ?? UIScreen.main
 		let borderWidth: CGFloat = drawsThinBorders ? 1.0 / screen.scale : 1.0
 
 		// Top border
 		if let color = topBorderColor {
-			CGContextSetFillColorWithColor(context, color.CGColor)
-			CGContextFillRect(context, CGRect(x: 0, y: 0, width: size.width, height: borderWidth))
+			context?.setFillColor(color.cgColor)
+			context?.fill(CGRect(x: 0, y: 0, width: size.width, height: borderWidth))
 		}
 
 		let sideY: CGFloat = topBorderColor != nil ? borderWidth : 0
@@ -163,24 +163,24 @@ public class GradientView: UIView {
 
 		// Right border
 		if let color = rightBorderColor {
-			CGContextSetFillColorWithColor(context, color.CGColor)
-			CGContextFillRect(context, CGRect(x: size.width - borderWidth, y: sideY, width: borderWidth, height: sideHeight))
+			context?.setFillColor(color.cgColor)
+			context?.fill(CGRect(x: size.width - borderWidth, y: sideY, width: borderWidth, height: sideHeight))
 		}
 
 		// Bottom border
 		if let color = bottomBorderColor {
-			CGContextSetFillColorWithColor(context, color.CGColor)
-			CGContextFillRect(context, CGRect(x: 0, y: size.height - borderWidth, width: size.width, height: borderWidth))
+			context?.setFillColor(color.cgColor)
+			context?.fill(CGRect(x: 0, y: size.height - borderWidth, width: size.width, height: borderWidth))
 		}
 
 		// Left border
 		if let color = leftBorderColor {
-			CGContextSetFillColorWithColor(context, color.CGColor)
-			CGContextFillRect(context, CGRect(x: 0, y: sideY, width: borderWidth, height: sideHeight))
+			context?.setFillColor(color.cgColor)
+			context?.fill(CGRect(x: 0, y: sideY, width: borderWidth, height: sideHeight))
 		}
 	}
 
-	override public func tintColorDidChange() {
+	override open func tintColorDidChange() {
 		super.tintColorDidChange()
 
 		if automaticallyDims {
@@ -188,31 +188,31 @@ public class GradientView: UIView {
 		}
 	}
 
-	override public func didMoveToWindow() {
+	override open func didMoveToWindow() {
 		super.didMoveToWindow()
-		contentMode = .Redraw
+		contentMode = .redraw
 	}
 
 
 	// MARK: - Private
 
-	private var gradient: CGGradientRef?
+	fileprivate var gradient: CGGradient?
 
-	private func updateGradient() {
+	fileprivate func updateGradient() {
 		gradient = nil
 		setNeedsDisplay()
 
 		let colors = gradientColors()
 		if let colors = colors {
 			let colorSpace = CGColorSpaceCreateDeviceRGB()
-			let colorSpaceModel = CGColorSpaceGetModel(colorSpace)
+			let colorSpaceModel = colorSpace.model
 
-			let gradientColors: NSArray = colors.map { (color: UIColor) -> AnyObject! in
-				let cgColor = color.CGColor
-				let cgColorSpace = CGColorGetColorSpace(cgColor)
+			let gradientColors = colors.map { (color: UIColor) -> AnyObject! in
+				let cgColor = color.cgColor
+				let cgColorSpace = cgColor.colorSpace
 
 				// The color's color space is RGB, simply add it.
-				if CGColorSpaceGetModel(cgColorSpace).rawValue == colorSpaceModel.rawValue {
+				if cgColorSpace?.model.rawValue == colorSpaceModel.rawValue {
 					return cgColor as AnyObject!
 				}
 
@@ -222,20 +222,20 @@ public class GradientView: UIView {
 				var green: CGFloat = 0
 				var alpha: CGFloat = 0
 				color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-				return UIColor(red: red, green: green, blue: blue, alpha: alpha).CGColor as AnyObject!
+				return UIColor(red: red, green: green, blue: blue, alpha: alpha).cgColor as AnyObject!
 			}
 
 			// TODO: This is ugly. Surely there is a way to make this more concise.
 			if let locations = locations {
-				gradient = CGGradientCreateWithColors(colorSpace, gradientColors, locations)
+				gradient = CGGradient(colorsSpace: colorSpace, colors: gradientColors as CFArray, locations: locations)
 			} else {
-				gradient = CGGradientCreateWithColors(colorSpace, gradientColors, nil)
+				gradient = CGGradient(colorsSpace: colorSpace, colors: gradientColors as CFArray, locations: nil)
 			}
 		}
 	}
 
-	private func gradientColors() -> [UIColor]? {
-		if tintAdjustmentMode == .Dimmed {
+	fileprivate func gradientColors() -> [UIColor]? {
+		if tintAdjustmentMode == .dimmed {
 			if let dimmedColors = dimmedColors {
 				return dimmedColors
 			}

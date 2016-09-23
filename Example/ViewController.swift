@@ -22,7 +22,7 @@ final class ViewController: UIViewController {
 		super.viewDidLoad()
 		
 		gradientView.colors = [
-			UIColor.whiteColor(),
+			UIColor.white,
 			UIColor(red: 0, green: 0, blue: 0.5, alpha: 1)
 		]
 		
@@ -33,9 +33,9 @@ final class ViewController: UIViewController {
 
 	// MARK: - Actions
 	
-	@IBAction func showAlert(sender: UIButton) {
-		let alert = UIAlertController(title: "Dimming", message: "As part of iOS 7 design language, views should become desaturated when an alert view appears.", preferredStyle: .Alert)
-		alert.addAction(UIAlertAction(title: "Awesome", style: .Default, handler: nil))
-		presentViewController(alert, animated: true, completion: nil)
+	@IBAction func showAlert(_ sender: UIButton) {
+		let alert = UIAlertController(title: "Dimming", message: "As part of iOS 7 design language, views should become desaturated when an alert view appears.", preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "Awesome", style: .default, handler: nil))
+		present(alert, animated: true, completion: nil)
 	}
 }
