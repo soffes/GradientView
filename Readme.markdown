@@ -6,10 +6,10 @@ Gradient View is tested on iOS 8. Released under the [MIT license](LICENSE).
 
 [![Version](https://img.shields.io/github/release/soffes/GradientView.svg)](https://github.com/soffes/GradientView/releases) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![CocoaPods compatible](https://img.shields.io/cocoapods/v/GradientView.svg)](https://cocoapods.org/pods/GradientView)
 
-| Swift Version | Crypto Version |
-| ------------- | -------------- |
-| 3.0           | 2.2.0          |
-| 2.2           | 2.1.1          |
+| Swift Version | Gradient View Version |
+| ------------- | --------------------- |
+| 3.0           | 2.2.0                 |
+| 2.2           | 2.1.1                 |
 
 
 ## Usage
