@@ -28,15 +28,18 @@ final class ViewController: UIViewController {
 		title = "Gradient View"
 		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Dim", style: .plain, target: self, action: #selector(showAlert))
 
-		gradientView.colors = [
-			.white,
-			UIColor(red: 0, green: 0, blue: 0.5, alpha: 1)
-		]
-		
+
 		// You can configure the locations as well
 //		gradientView.locations = [0.4, 0.6]
-	}
 
+		//Radial options
+		gradientView.mode = .radial
+		gradientView.radialGradientStartAttributes = GradientView.RadialGradientAttributes(origin: CGPoint(x: 0.25, y: 0.75), radius: 1, size: (max(gradientView.bounds.size.width, gradientView.bounds.height) * 1.5 / 2))
+		gradientView.radialGradientEndAttributes = GradientView.RadialGradientAttributes(origin: CGPoint(x: 0.75, y: 0.25))
+
+
+		gradientView.colors = [.blue, .red]
+	}
 
 	// MARK: - Actions
 	
