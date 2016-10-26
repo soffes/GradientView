@@ -269,7 +269,7 @@ import UIKit
 				var alpha: CGFloat = 0
 				color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 				return UIColor(red: red, green: green, blue: blue, alpha: alpha).cgColor as AnyObject!
-			} as NSArray
+				} as NSArray
 
 			gradient = CGGradient(colorsSpace: colorSpace, colors: gradientColors, locations: locations)
 		}
@@ -295,7 +295,7 @@ import UIKit
 				}
 			}
 		}
-
+		
 		return colors
 	}
 }
