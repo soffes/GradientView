@@ -9,7 +9,7 @@
 import UIKit
 
 /// Simple view for drawing gradients and borders.
-@IBDesignable open class GradientView: UIView {
+open class GradientView: UIView {
 
 	// MARK: - Types
 
@@ -72,14 +72,14 @@ import UIKit
 	}
 
 	/// The mode of the gradient. The default is `.Linear`.
-	@IBInspectable open var mode: Mode = .linear {
+	open var mode: Mode = .linear {
 		didSet {
 			setNeedsDisplay()
 		}
 	}
 
 	/// The direction of the gradient. Only valid for the `Mode.Linear` mode. The default is `.Vertical`.
-	@IBInspectable open var direction: Direction = .vertical {
+	open var direction: Direction = .vertical {
 		didSet {
 			setNeedsDisplay()
 		}
