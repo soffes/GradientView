@@ -27,9 +27,25 @@ import UIKit
 	public enum Direction {
 		/// The gradient is vertical.
 		case vertical
-
-		/// The gradient is horizontal
+		
+		/// The gradient is horizontal.
 		case horizontal
+		
+		/// Define a custom direction based on two CGPoints.
+		case custom(start: CGPoint, end: CGPoint)
+		
+		public static func ==(lhs: Direction, rhs: Direction) -> Bool {
+			switch (lhs, rhs) {
+			case (.vertical, .vertical):
+				return true
+			case (.horizontal, .horizontal):
+				return true
+			case (.custom(let lhsStart, let lhsEnd), .custom(let rhsStart, let rhsEnd)):
+				return lhsStart == rhsStart && lhsEnd == rhsEnd
+			default:
+				return false
+			}
+		}
 	}
 
 
@@ -132,8 +148,16 @@ import UIKit
 			let options: CGGradientDrawingOptions = [.drawsAfterEndLocation]
 
 			if mode == .linear {
-				let startPoint = CGPoint.zero
-				let endPoint = direction == .vertical ? CGPoint(x: 0, y: size.height) : CGPoint(x: size.width, y: 0)
+				let startPoint: CGPoint
+				let endPoint: CGPoint
+				switch direction {
+				case .horizontal, .vertical:
+					startPoint = CGPoint.zero
+					endPoint = direction == .vertical ? CGPoint(x: 0, y: size.height) : CGPoint(x: size.width, y: 0)
+				case .custom(let start, let end):
+					startPoint = start
+					endPoint = end
+				}
 				context?.drawLinearGradient(gradient, start: startPoint, end: endPoint, options: options)
 			} else {
 				let center = CGPoint(x: bounds.midX, y: bounds.midY)
