@@ -82,7 +82,7 @@ import UIKit
   #endif
   
   /// The direction of the gradient. Only valid for the `Mode.Linear` mode. The default is `.Vertical`.
-  var direction: Direction = .vertical
+  public var direction: Direction = .vertical
   #if TARGET_INTERFACE_BUILDER
   @IBInspectable open var direction: Direction = .vertical {
   didSet {
