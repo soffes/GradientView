@@ -14,7 +14,7 @@ import UIKit
 	// MARK: - Types
 
 	/// The mode of the gradient.
-	public enum Mode {
+	@objc public enum Mode: Int {
 		/// A linear gradient.
 		case linear
 
@@ -24,7 +24,7 @@ import UIKit
 
 
 	/// The direction of the gradient.
-	public enum Direction {
+	@objc public enum Direction: Int {
 		/// The gradient is vertical.
 		case vertical
 
