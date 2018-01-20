@@ -36,7 +36,7 @@ See the [source](GradientView.swift) for full documentation.
 
 ## Example
 
-![Screenshot](http://soff.me/WetB/Screenshot.png) ![Screenshot](http://soff.me/Wg7G/Screenshot2.png)
+<img src="Example/Screenshots/Screenshot1@2x.png" width="320" alt="Screenshot 1"> <img src="Example/Screenshots/Screenshot2@2x.png" width="320" alt="Screenshot 2">
 
 Open up the included Xcode project for an example app.
 
