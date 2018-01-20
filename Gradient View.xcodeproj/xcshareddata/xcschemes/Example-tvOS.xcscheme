@@ -14,37 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2163B9F51A25FBF000610B0C"
-               BuildableName = "Example.app"
-               BlueprintName = "Example"
-               ReferencedContainer = "container:Gradient View.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2163BA0A1A25FBF000610B0C"
-               BuildableName = "ExampleTests.xctest"
-               BlueprintName = "ExampleTests"
-               ReferencedContainer = "container:Gradient View.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2163BA291A25FBFD00610B0C"
-               BuildableName = "GradientViewTests.xctest"
-               BlueprintName = "GradientViewTests"
+               BlueprintIdentifier = "21F917462013E59000B52603"
+               BuildableName = "Example-tvOS.app"
+               BlueprintName = "Example-tvOS"
                ReferencedContainer = "container:Gradient View.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -57,33 +29,13 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2163BA0A1A25FBF000610B0C"
-               BuildableName = "ExampleTests.xctest"
-               BlueprintName = "ExampleTests"
-               ReferencedContainer = "container:Gradient View.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2163BA291A25FBFD00610B0C"
-               BuildableName = "GradientViewTests.xctest"
-               BlueprintName = "GradientViewTests"
-               ReferencedContainer = "container:Gradient View.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2163B9F51A25FBF000610B0C"
-            BuildableName = "Example.app"
-            BlueprintName = "Example"
+            BlueprintIdentifier = "21F917462013E59000B52603"
+            BuildableName = "Example-tvOS.app"
+            BlueprintName = "Example-tvOS"
             ReferencedContainer = "container:Gradient View.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -105,9 +57,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2163B9F51A25FBF000610B0C"
-            BuildableName = "Example.app"
-            BlueprintName = "Example"
+            BlueprintIdentifier = "21F917462013E59000B52603"
+            BuildableName = "Example-tvOS.app"
+            BlueprintName = "Example-tvOS"
             ReferencedContainer = "container:Gradient View.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -124,9 +76,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2163B9F51A25FBF000610B0C"
-            BuildableName = "Example.app"
-            BlueprintName = "Example"
+            BlueprintIdentifier = "21F917462013E59000B52603"
+            BuildableName = "Example-tvOS.app"
+            BlueprintName = "Example-tvOS"
             ReferencedContainer = "container:Gradient View.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

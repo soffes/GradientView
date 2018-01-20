@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2163BA1F1A25FBFD00610B0C"
-               BuildableName = "GradientView.framework"
-               BlueprintName = "GradientView"
+               BlueprintIdentifier = "2163B9F51A25FBF000610B0C"
+               BuildableName = "Example.app"
+               BlueprintName = "Example-iOS"
                ReferencedContainer = "container:Gradient View.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -30,6 +30,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2163B9F51A25FBF000610B0C"
+            BuildableName = "Example.app"
+            BlueprintName = "Example-iOS"
+            ReferencedContainer = "container:Gradient View.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -44,15 +53,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2163BA1F1A25FBFD00610B0C"
-            BuildableName = "GradientView.framework"
-            BlueprintName = "GradientView"
+            BlueprintIdentifier = "2163B9F51A25FBF000610B0C"
+            BuildableName = "Example.app"
+            BlueprintName = "Example-iOS"
             ReferencedContainer = "container:Gradient View.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -62,15 +72,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2163BA1F1A25FBFD00610B0C"
-            BuildableName = "GradientView.framework"
-            BlueprintName = "GradientView"
+            BlueprintIdentifier = "2163B9F51A25FBF000610B0C"
+            BuildableName = "Example.app"
+            BlueprintName = "Example-iOS"
             ReferencedContainer = "container:Gradient View.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
