@@ -10,6 +10,8 @@ Pod::Spec.new do |spec|
 
   spec.platform = :ios, '8.0'
   spec.platform = :ios, '9.0'
+  spec.platform = :tvos
+
   spec.frameworks = 'UIKit'
   spec.source_files = 'GradientView/**/*.{h,m,swift}'
 end
