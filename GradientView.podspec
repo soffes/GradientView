@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   spec.license = { :type => 'MIT', :file => 'LICENSE' }
 
   spec.platform = :ios, '8.0'
-  spec.platform = :ios, '9.0'
+  spec.platform = :tvos, '9.0'
   spec.frameworks = 'UIKit'
   spec.source_files = 'GradientView/**/*.{h,m,swift}'
 end
