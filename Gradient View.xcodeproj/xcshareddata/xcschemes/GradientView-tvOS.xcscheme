@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "21F917382013E39000B52603"
-               BuildableName = "GradientView_tvOS.framework"
+               BuildableName = "GradientView.framework"
                BlueprintName = "GradientView-tvOS"
                ReferencedContainer = "container:Gradient View.xcodeproj">
             </BuildableReference>
@@ -48,7 +48,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "21F917382013E39000B52603"
-            BuildableName = "GradientView_tvOS.framework"
+            BuildableName = "GradientView.framework"
             BlueprintName = "GradientView-tvOS"
             ReferencedContainer = "container:Gradient View.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "21F917382013E39000B52603"
-            BuildableName = "GradientView_tvOS.framework"
+            BuildableName = "GradientView.framework"
             BlueprintName = "GradientView-tvOS"
             ReferencedContainer = "container:Gradient View.xcodeproj">
          </BuildableReference>
