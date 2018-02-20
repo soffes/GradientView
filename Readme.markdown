@@ -12,20 +12,20 @@ Easily use gradients in UIKit. Gradient View is a simple UIView wrapper around C
 
 ``` swift
 // Initialize a gradient view
-let gradientView = GradientView(frame: CGRectMake(x: 20, y: 20, width: 280, height: 280))
+let gradientView = GradientView(frame: CGRect(x: 20, y: 20, width: 280, height: 280))
 
 // Set the gradient colors
-gradientView.colors = [UIColor.greenColor(), UIColor.yellowColor()]
+gradientView.colors = [.green, .yellow]
 
 // Optionally set some locations
 gradientView.locations = [0.8, 1.0]
 
 // Optionally change the direction. The default is vertical.
-gradientView.direction = .Horizontal
+gradientView.direction = .horizontal
 
 // Add some borders too if you want
-gradientView.topBorderColor = UIColor.redColor()
-gradientView.bottomBorderColor = UIColor.blueColor()
+gradientView.topBorderColor = .red
+gradientView.bottomBorderColor = .blue
 
 // Add it as a subview in all of its awesome
 view.addSubview(gradientView)
