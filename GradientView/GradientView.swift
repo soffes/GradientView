@@ -37,7 +37,7 @@ import UIKit
 
 	/// An optional array of `UIColor` objects used to draw the gradient. If the value is `nil`, the `backgroundColor`
 	/// will be drawn instead of a gradient. The default is `nil`.
-	open var colors: [UIColor]? {
+	@objc open var colors: [UIColor]? {
 		didSet {
 			updateGradient()
 		}
@@ -48,7 +48,7 @@ import UIKit
 	/// things will happen. You must make sure the number of dimmed colors equals the number of regular colors.
 	///
 	/// The default is `nil`.
-	open var dimmedColors: [UIColor]? {
+	@objc open var dimmedColors: [UIColor]? {
 		didSet {
 			updateGradient()
 		}
@@ -57,7 +57,7 @@ import UIKit
 	/// Automatically dim gradient colors when prompted by the system (i.e. when an alert is shown).
 	///
 	/// The default is `true`.
-	open var automaticallyDims: Bool = true
+	@objc open var automaticallyDims: Bool = true
 
 	/// An optional array of `CGFloat`s defining the location of each gradient stop.
 	///
@@ -65,7 +65,7 @@ import UIKit
 	/// `nil`, the stops are spread uniformly across the range.
 	///
 	/// Defaults to `nil`.
-	open var locations: [CGFloat]? {
+	@objc open var locations: [CGFloat]? {
 		didSet {
 			updateGradient()
 		}
