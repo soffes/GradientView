@@ -289,12 +289,12 @@
 				TargetAttributes = {
 					2163B9F51A25FBF000610B0C = {
 						CreatedOnToolsVersion = 6.1;
-						LastSwiftMigration = 1000;
+  					LastSwiftMigration = 1020;
 						ProvisioningStyle = Manual;
 					};
 					2163BA1F1A25FBFD00610B0C = {
 						CreatedOnToolsVersion = 6.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 					21F917382013E39000B52603 = {
 						CreatedOnToolsVersion = 9.2;
@@ -314,6 +314,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -546,7 +547,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.samsoffes.gradient-view.example";
 				PRODUCT_NAME = Example;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -562,7 +563,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.samsoffes.gradient-view.example";
 				PRODUCT_NAME = Example;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -591,7 +592,7 @@
 				PRODUCT_NAME = GradientView;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -616,7 +617,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.samsoffes.gradient-view";
 				PRODUCT_NAME = GradientView;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
