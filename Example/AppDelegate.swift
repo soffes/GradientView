@@ -15,9 +15,8 @@ import UIKit
 		window.rootViewController = UINavigationController(rootViewController: ViewController())
 		return window
 	}()
-
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-		window?.makeKeyAndVisible()
-		return true
-	}
+    
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        window?.makeKeyAndVisible()
+    }
 }
