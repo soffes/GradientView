@@ -15,7 +15,7 @@ import UIKit
 		window.rootViewController = UINavigationController(rootViewController: ViewController())
 		return window
 	}()
-    
+  
     func applicationDidFinishLaunching(_ application: UIApplication) {
         window?.makeKeyAndVisible()
     }
