@@ -3,7 +3,6 @@
 Easily use gradients in UIKit. Gradient View is a simple UIView wrapper around CGGradient.
 
 [![Version](https://img.shields.io/github/release/soffes/GradientView.svg)](https://github.com/soffes/GradientView/releases)
-![Swift Version](https://img.shields.io/badge/swift-4.0-orange.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/GradientView.svg)](https://cocoapods.org/pods/GradientView)
 

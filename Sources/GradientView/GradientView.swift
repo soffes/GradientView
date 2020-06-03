@@ -1,11 +1,3 @@
-//
-//  GradientView.swift
-//  Gradient View
-//
-//  Created by Sam Soffes on 10/27/09.
-//  Copyright (c) 2009-2014 Sam Soffes. All rights reserved.
-//
-
 import UIKit
 
 /// Simple view for drawing gradients and borders.
@@ -22,7 +14,6 @@ import UIKit
 		case radial
 	}
 
-
 	/// The direction of the gradient.
 	@objc public enum Direction: Int {
 		/// The gradient is vertical.
@@ -31,7 +22,6 @@ import UIKit
 		/// The gradient is horizontal
 		case horizontal
 	}
-
 
 	// MARK: - Properties
 
@@ -120,7 +110,6 @@ import UIKit
 		}
 	}
 
-
 	// MARK: - UIView
 
 	override open func draw(_ rect: CGRect) {
@@ -185,12 +174,11 @@ import UIKit
 		contentMode = .redraw
 	}
 
-
 	// MARK: - Private
 
-	fileprivate var gradient: CGGradient?
+	private var gradient: CGGradient?
 
-	fileprivate func updateGradient() {
+	private func updateGradient() {
 		gradient = nil
 		setNeedsDisplay()
 
@@ -221,7 +209,7 @@ import UIKit
 		}
 	}
 
-	fileprivate func gradientColors() -> [UIColor]? {
+	private func gradientColors() -> [UIColor]? {
 		if tintAdjustmentMode == .dimmed {
 			if let dimmedColors = dimmedColors {
 				return dimmedColors
